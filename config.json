@@ -1,5 +1,6 @@
 {
   "window_days": 3,
+  "max_per_source": 25,
   "quotas": {
     "us-politics": 6,
     "global": 6,
@@ -7,14 +8,23 @@
     "atlanta": 4
   },
   "sources": [
-    { "name": "NYT", "section": "us-politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml" },
-    { "name": "NYT", "section": "us-politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml" },
-    { "name": "NYT", "section": "global", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml" },
-    { "name": "Reuters/AP", "section": "global", "url": "https://news.google.com/rss/search?q=when:3d+(site:reuters.com+OR+site:apnews.com)&hl=en-US&gl=US&ceid=US:en" },
-    { "name": "Guardian", "section": "global", "url": "https://www.theguardian.com/world/rss" },
-    { "name": "HDN", "section": "turkey", "url": "https://www.hurriyetdailynews.com/rss/news" },
-    { "name": "Daily Sabah", "section": "turkey", "url": "https://www.dailysabah.com/rss" },
-    { "name": "Bianet", "section": "turkey", "url": "https://bianet.org/english/rss" },
+    { "name": "NYT", "section": "us-politics", "cap": 15, "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml" },
+    { "name": "NYT", "section": "us-politics", "cap": 10, "url": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml" },
+
+    { "name": "NYT", "section": "global", "cap": 15, "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml" },
+    { "name": "Guardian", "section": "global", "cap": 20, "url": "https://www.theguardian.com/world/rss" },
+    { "name": "BBC", "section": "global", "cap": 20, "url": "https://feeds.bbci.co.uk/news/world/rss.xml" },
+    { "name": "AP", "section": "global", "url": "https://news.google.com/rss/search?q=when:3d+site:apnews.com&hl=en-US&gl=US&ceid=US:en" },
+    { "name": "Reuters", "section": "global", "url": "https://news.google.com/rss/search?q=when:3d+site:reuters.com&hl=en-US&gl=US&ceid=US:en" },
+
+    { "name": "HDN", "section": "turkey", "cap": 20, "url": "https://www.hurriyetdailynews.com/rss/news" },
+    { "name": "BBC Turkce", "section": "turkey", "cap": 12, "url": "https://feeds.bbci.co.uk/turkce/rss.xml" },
+    { "name": "Cumhuriyet", "section": "turkey", "cap": 12, "url": "https://www.cumhuriyet.com.tr/rss" },
+    { "name": "Sozcu", "section": "turkey", "cap": 12, "url": "https://www.sozcu.com.tr/feeds-rss-category-sozcu" },
+    { "name": "Daily Sabah", "section": "turkey", "cap": 12, "url": "https://www.dailysabah.com/rss" },
+    { "name": "T24", "section": "turkey", "url": "https://news.google.com/rss/search?q=when:3d+site:t24.com.tr&hl=tr&gl=TR&ceid=TR:tr" },
+    { "name": "Now TV", "section": "turkey", "url": "https://news.google.com/rss/search?q=when:3d+site:nowtv.com.tr&hl=tr&gl=TR&ceid=TR:tr" },
+
     { "name": "AJC", "section": "atlanta", "url": "https://news.google.com/rss/search?q=site:ajc.com+when:3d&hl=en-US&gl=US&ceid=US:en" },
     { "name": "WSB-TV", "section": "atlanta", "url": "https://news.google.com/rss/search?q=site:wsbtv.com+when:3d&hl=en-US&gl=US&ceid=US:en" },
     { "name": "GPB", "section": "atlanta", "url": "https://news.google.com/rss/search?q=site:gpb.org+when:3d&hl=en-US&gl=US&ceid=US:en" }
