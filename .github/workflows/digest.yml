@@ -42,7 +42,11 @@ jobs:
           git diff --staged --quiet || git commit -m "digest $(date -u +%F)"
           git push
 
-      - run: mkdir -p _site && cp index.html _site/
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          if [ -d archive ]; then cp -r archive _site/; fi
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
