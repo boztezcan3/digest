@@ -1,0 +1,22 @@
+{
+  "window_days": 3,
+  "quotas": {
+    "us-politics": 6,
+    "global": 6,
+    "turkey": 4,
+    "atlanta": 4
+  },
+  "sources": [
+    { "name": "NYT", "section": "us-politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml" },
+    { "name": "NYT", "section": "us-politics", "url": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml" },
+    { "name": "NYT", "section": "global", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml" },
+    { "name": "Reuters/AP", "section": "global", "url": "https://news.google.com/rss/search?q=when:3d+(site:reuters.com+OR+site:apnews.com)&hl=en-US&gl=US&ceid=US:en" },
+    { "name": "Guardian", "section": "global", "url": "https://www.theguardian.com/world/rss" },
+    { "name": "HDN", "section": "turkey", "url": "https://www.hurriyetdailynews.com/rss/news" },
+    { "name": "Daily Sabah", "section": "turkey", "url": "https://www.dailysabah.com/rss" },
+    { "name": "Bianet", "section": "turkey", "url": "https://bianet.org/english/rss" },
+    { "name": "AJC", "section": "atlanta", "url": "https://news.google.com/rss/search?q=site:ajc.com+when:3d&hl=en-US&gl=US&ceid=US:en" },
+    { "name": "WSB-TV", "section": "atlanta", "url": "https://news.google.com/rss/search?q=site:wsbtv.com+when:3d&hl=en-US&gl=US&ceid=US:en" },
+    { "name": "GPB", "section": "atlanta", "url": "https://news.google.com/rss/search?q=site:gpb.org+when:3d&hl=en-US&gl=US&ceid=US:en" }
+  ]
+}
