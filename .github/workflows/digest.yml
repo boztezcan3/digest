@@ -2,13 +2,18 @@ name: digest
 
 on:
   schedule:
-    - cron: "0 11 * * 2,4,6"   # Tue/Thu/Sat 11:00 UTC (7am ET summer, 6am ET winter)
-  workflow_dispatch:            # adds a "Run workflow" button for manual runs
+    - cron: "0 11 * * 2,4,6"
+  workflow_dispatch:
+    inputs:
+      fresh_start:
+        description: "Reset seen stories and rebuild"
+        type: boolean
+        default: false
 
 permissions:
-  contents: write   # lets the job commit state.json
-  pages: write      # lets the job publish the page
-  id-token: write   # required by deploy-pages
+  contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: pages
@@ -20,6 +25,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - uses: actions/checkout@v4
 
@@ -27,19 +33,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install feedparser requests
+      - name: Install dependencies
+        run: pip install feedparser requests
+
+      - name: Optional state reset
+        if: ${{ inputs.fresh_start }}
+        run: rm -f state.json
 
       - name: Build digest
         run: python digest.py
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
 
-      - name: Save state
+      - name: Save digest and state
         run: |
           git config user.name digest-bot
           git config user.email bot@users.noreply.github.com
-          git add -A
-          git diff --staged --quiet || git commit -m "digest $(date -u +%F)"
+          git add index.html state.json archive
+          git diff --staged --quiet || git commit -m "Update digest"
           git push
 
       - name: Stage site
@@ -49,8 +60,10 @@ jobs:
           if [ -d archive ]; then cp -r archive _site/; fi
 
       - uses: actions/configure-pages@v5
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
       - id: deployment
         uses: actions/deploy-pages@v4
