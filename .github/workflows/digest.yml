@@ -2,7 +2,7 @@ name: digest
 
 on:
   schedule:
-    - cron: "0 11 * * 2,4,6"
+    - cron: "37 10 * * 2,4,6"
   workflow_dispatch:
     inputs:
       fresh_start:
