@@ -5,7 +5,17 @@
     "us-politics": 6,
     "global": 6,
     "turkey": 4,
-    "atlanta": 4
+    "atlanta": 4,
+    "opinion": 5
+  },
+  "source_preference": [
+    "NYT",
+    "AJC",
+    "BBC",
+    "T24"
+  ],
+  "source_limits": {
+    "HDN": 1
   },
   "sources": [
     {
@@ -98,12 +108,6 @@
       "url": "https://www.sozcu.com.tr/feeds-rss-category-sozcu"
     },
     {
-      "name": "Daily Sabah",
-      "section": "turkey",
-      "cap": 12,
-      "url": "https://www.dailysabah.com/rss"
-    },
-    {
       "name": "T24",
       "section": "turkey",
       "url": "https://news.google.com/rss/search?q=when:3d+site:t24.com.tr&hl=tr&gl=TR&ceid=TR:tr"
@@ -127,6 +131,37 @@
       "name": "GPB",
       "section": "atlanta",
       "url": "https://news.google.com/rss/search?q=site:gpb.org+when:3d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "NYT",
+      "section": "opinion",
+      "cap": 20,
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Opinion.xml"
+    },
+    {
+      "name": "NPR",
+      "section": "opinion",
+      "url": "https://news.google.com/rss/search?q=site:npr.org+opinion+when:3d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "BBC",
+      "section": "opinion",
+      "url": "https://news.google.com/rss/search?q=site:bbc.com+opinion+when:3d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "T24",
+      "section": "opinion",
+      "url": "https://news.google.com/rss/search?q=site:t24.com.tr+yazar+when:3d&hl=tr&gl=TR&ceid=TR:tr"
+    },
+    {
+      "name": "AJC",
+      "section": "opinion",
+      "url": "https://news.google.com/rss/search?q=site:ajc.com+opinion+when:3d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "name": "Sözcü",
+      "section": "opinion",
+      "url": "https://news.google.com/rss/search?q=site:sozcu.com.tr+yazar+when:3d&hl=tr&gl=TR&ceid=TR:tr"
     }
   ]
 }
