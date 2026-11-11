@@ -14,6 +14,8 @@ from urllib.parse import urlparse
 import feedparser
 import requests
 
+import diagnostics as diag
+
 
 with open("config.json", encoding="utf-8") as f:
     CFG = json.load(f)
@@ -103,6 +105,7 @@ def fetch(cutoff, seen):
             feed = feedparser.parse(response.content)
         except requests.RequestException as exc:
             print(f"  {section} | {name}: FETCH ERROR: {exc}")
+            diag.feed_error(section, name, exc)
             continue
 
         if feed.bozo:
@@ -153,6 +156,7 @@ def fetch(cutoff, seen):
             f"  {section} | {name}: "
             f"{returned} / {in_window} / {len(unseen)} / {len(selected)}"
         )
+        diag.feed(section, name, returned, in_window, len(unseen), len(selected))
         all_items.extend(selected)
 
     return all_items
@@ -248,7 +252,7 @@ def parse_json_object(text):
     return obj
 
 
-def call_llm(system, user_json):
+def call_llm(system, user_json, label=""):
     """Call OpenRouter, retrying temporary errors."""
     import random
     import time
@@ -279,6 +283,7 @@ def call_llm(system, user_json):
             if attempt == max_attempts - 1:
                 raise
 
+            diag.count("connection_retries")
             wait = min(60, 5 * (2 ** attempt)) + random.uniform(0, 2)
             print(
                 f"Temporary API connection error: {type(exc).__name__}. "
@@ -295,6 +300,7 @@ def call_llm(system, user_json):
                 )
                 response.raise_for_status()
 
+            diag.count("http_retries")
             retry_after = response.headers.get("Retry-After", "")
 
             try:
@@ -313,6 +319,7 @@ def call_llm(system, user_json):
         response.raise_for_status()
 
         result = response.json()
+        diag.usage(label, result)
         content = result["choices"][0]["message"]["content"]
 
         try:
@@ -322,6 +329,7 @@ def call_llm(system, user_json):
                 f"Unparseable model reply ({exc}); "
                 f"first 300 chars: {content[:300]!r}"
             )
+            diag.count("parse_retries")
             if attempt == max_attempts - 1:
                 raise
             # temperature > 0, so another attempt often succeeds
@@ -329,7 +337,7 @@ def call_llm(system, user_json):
     raise RuntimeError("OpenRouter request did not complete.")
 
 
-def ask(items):
+def ask(items, label="selection"):
     payload = [
         {
             "i": number,
@@ -344,6 +352,7 @@ def ask(items):
     parsed = call_llm(
         PROMPT,
         json.dumps(payload, ensure_ascii=False),
+        label=label,
     )
 
     if not isinstance(parsed.get("picks"), list):
@@ -363,22 +372,29 @@ def ask_by_section(items):
 
         if not idx:
             print(f"  {section}: 0 candidates sent")
+            diag.selection(section, [], [])
             continue
 
+        sub = [items[n] for n in idx]
+
         try:
-            picks = ask([items[n] for n in idx])
+            picks = ask(sub, label=f"selection:{section}")
         except Exception as exc:
             print(f"  {section}: {len(idx)} candidates, "
                   f"selection call FAILED: {type(exc).__name__}: {exc}")
+            diag.event("selection_failed",
+                       f"{section}: {type(exc).__name__}: {exc}")
             continue
 
-        good = [
-            dict(p, i=idx[p["i"]])
-            for p in picks
+        local = [
+            p for p in picks
             if isinstance(p, dict)
             and type(p.get("i")) is int
-            and 0 <= p["i"] < len(idx)
+            and 0 <= p["i"] < len(sub)
         ]
+        diag.selection(section, sub, local)
+
+        good = [dict(p, i=idx[p["i"]]) for p in local]
         print(f"  {section}: {len(idx)} candidates -> {len(good)} picks")
         all_picks.extend(good)
 
@@ -538,6 +554,12 @@ def assemble(items, picks):
 
     for section, quota in CFG["quotas"].items():
         section_picks = []
+        section_keys = {
+            k for k, g in groups.items()
+            if any(i["section"] == section for i in g)
+        }
+        taken_elsewhere = sum(1 for k in section_keys if k in chosen_events)
+        ran_out = False
 
         while len(section_picks) < quota:
             available = []
@@ -565,6 +587,7 @@ def assemble(items, picks):
                     available.append((key, eligible[0]))
 
             if not available:
+                ran_out = True
                 break
 
             # Favor sources not yet represented in this section, then
@@ -587,6 +610,11 @@ def assemble(items, picks):
             chosen_events.add(key)
             source_counts[selected["source"]] += 1
 
+        diag.section_result(
+            section, quota, section_picks,
+            len(section_keys), taken_elsewhere, ran_out,
+        )
+
         if section_picks:
             max(
                 section_picks,
@@ -595,6 +623,7 @@ def assemble(items, picks):
 
         chosen.extend(section_picks)
 
+    diag.published(chosen)
     return chosen
 
 def esc(value):
@@ -744,9 +773,11 @@ def main():
 
     items = dedupe(fetch(cutoff, seen))
     print(f"\n{len(items)} candidates after feed caps and deduplication")
+    diag.note("candidates_after_dedupe", len(items))
 
     if not items:
         print("No new candidates. Keeping the previous digest.")
+        diag.note("outcome", "no new candidates; previous digest kept")
         if not os.path.exists(OUT):
             raise RuntimeError("No digest exists yet and no candidates were found.")
         return
@@ -757,6 +788,7 @@ def main():
 
     if not chosen:
         print("No valid stories selected. Keeping the previous digest.")
+        diag.note("outcome", "no valid stories; previous digest kept")
         if not os.path.exists(OUT):
             raise RuntimeError("No digest exists yet and no stories were selected.")
         return
@@ -775,4 +807,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    diag.start_run(MODEL)
+
+    try:
+        main()
+        diag.finish_run("ok")
+    except BaseException as exc:
+        diag.finish_run("error", error=f"{type(exc).__name__}: {exc}")
+        raise
