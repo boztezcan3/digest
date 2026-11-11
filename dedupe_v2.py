@@ -17,6 +17,12 @@ from collections import Counter
 # This does NOT automatically merge stories.
 LEXICAL_AUDIT_THRESHOLD = 0.12
 
+# Same-kind pairs at or above this value ARE merged (after the AI step).
+# From one day's audit log: true duplicates scored 0.44-0.51, a false pair
+# 0.36. Same-event pairs between 0.20 and 0.33 can't be separated from
+# false ones lexically, so those are left to the AI step.
+LEXICAL_MERGE_THRESHOLD = 0.40
+
 # Keep logs readable when many candidates have similar vocabulary.
 MAX_AUDIT_PAIRS = 30
 
@@ -137,8 +143,10 @@ Rules:
 
 def validate_groups(raw, candidates):
     """
-    Require a complete, non-overlapping partition of the input.
-    Reject invalid responses rather than guessing.
+    Repair the model's partition instead of rejecting it: drop repeated or
+    invalid indices, split groups that mix news and opinion, and make any
+    omitted candidate a singleton. Every repair is conservative (it can
+    only keep items apart). Reject only if the reply is mostly garbage.
     """
     groups = raw.get("groups") if isinstance(raw, dict) else None
 
@@ -146,14 +154,15 @@ def validate_groups(raw, candidates):
         raise ValueError("Clustering response has no groups list.")
 
     seen = set()
-    validated = []
+    repaired = []
+    fixes = 0
 
     for group in groups:
-        if not isinstance(group, list) or not group:
-            raise ValueError("Clustering returned an invalid group.")
+        if not isinstance(group, list):
+            fixes += 1
+            continue
 
-        group_kinds = set()
-
+        by_kind = {}
         for index in group:
             if (
                 type(index) is not int
@@ -161,24 +170,28 @@ def validate_groups(raw, candidates):
                 or index >= len(candidates)
                 or index in seen
             ):
-                raise ValueError(
-                    "Clustering returned an invalid or repeated index."
-                )
+                fixes += 1
+                continue
 
             seen.add(index)
-            group_kinds.add(kind(candidates[index]))
+            by_kind.setdefault(kind(candidates[index]), []).append(index)
 
-        if len(group_kinds) != 1:
-            raise ValueError(
-                "Clustering mixed opinion and news in one group."
-            )
+        if len(by_kind) > 1:
+            fixes += 1
+        repaired.extend(by_kind.values())
 
-        validated.append(group)
+    for index in range(len(candidates)):
+        if index not in seen:
+            repaired.append([index])
+            fixes += 1
 
-    if seen != set(range(len(candidates))):
-        raise ValueError("Clustering omitted one or more candidates.")
+    if fixes > max(5, len(candidates) // 2):
+        raise ValueError(f"Clustering response too malformed ({fixes} fixes).")
 
-    return validated
+    if fixes:
+        print(f"Clustering response repaired ({fixes} fixes).")
+
+    return repaired
 
 
 def assign_event_ids(candidates, call_llm):
@@ -254,6 +267,29 @@ def assign_event_ids(candidates, call_llm):
         else:
             exact_titles[key] = index
 
+    # High-confidence lexical matches ARE merged (same kind only).
+    vectors = make_vectors(candidates)
+    merged_pairs = []
+
+    for first in range(len(candidates)):
+        for second in range(first + 1, len(candidates)):
+            if kind(candidates[first]) != kind(candidates[second]):
+                continue
+            if find(first) == find(second):
+                continue
+            similarity = cosine(vectors[first], vectors[second])
+            if similarity >= LEXICAL_MERGE_THRESHOLD:
+                union(first, second)
+                merged_pairs.append((similarity, first, second))
+
+    for similarity, first, second in sorted(merged_pairs, reverse=True):
+        print(
+            f"  auto-merged {similarity:.2f}: "
+            f"{candidates[first]['source']}: {candidates[first]['title'][:60]}"
+            f" | {candidates[second]['source']}: "
+            f"{candidates[second]['title'][:60]}"
+        )
+
     # Assign stable-for-this-run IDs to confirmed clusters.
     for index, item in enumerate(candidates):
         item["event_id"] = f"cluster-{find(index)}"
@@ -276,7 +312,6 @@ def assign_event_ids(candidates, call_llm):
             print(f"  {event_id}: {titles}")
 
     # Audit possible missed matches. These are NOT merged.
-    vectors = make_vectors(candidates)
     possible = []
 
     for first in range(len(candidates)):
