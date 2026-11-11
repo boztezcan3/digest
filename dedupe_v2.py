@@ -12,16 +12,24 @@ import math
 import unicodedata
 from collections import Counter
 
+import diagnostics as diag
+
 
 # Log possible matches at or above this value.
 # This does NOT automatically merge stories.
-LEXICAL_AUDIT_THRESHOLD = 0.12
+LEXICAL_AUDIT_THRESHOLD = 0.20
 
 # Same-kind pairs at or above this value ARE merged (after the AI step).
 # From one day's audit log: true duplicates scored 0.44-0.51, a false pair
 # 0.36. Same-event pairs between 0.20 and 0.33 can't be separated from
 # false ones lexically, so those are left to the AI step.
 LEXICAL_MERGE_THRESHOLD = 0.40
+
+# Cluster members whose best similarity to the rest of their cluster is
+# below this are logged as WEAK LINKS (review for false merges; log only).
+# Tested on titles from one real log: false/loose members scored 0.00-0.08,
+# true same-event members 0.21-0.42.
+WEAK_LINK_THRESHOLD = 0.10
 
 # Keep logs readable when many candidates have similar vocabulary.
 MAX_AUDIT_PAIRS = 30
@@ -155,11 +163,11 @@ def validate_groups(raw, candidates):
 
     seen = set()
     repaired = []
-    fixes = 0
+    types = Counter()
 
     for group in groups:
         if not isinstance(group, list):
-            fixes += 1
+            types["malformed_group"] += 1
             continue
 
         by_kind = {}
@@ -170,28 +178,54 @@ def validate_groups(raw, candidates):
                 or index >= len(candidates)
                 or index in seen
             ):
-                fixes += 1
+                types["bad_or_repeated_index"] += 1
                 continue
 
             seen.add(index)
             by_kind.setdefault(kind(candidates[index]), []).append(index)
 
         if len(by_kind) > 1:
-            fixes += 1
+            types["mixed_news_opinion"] += 1
         repaired.extend(by_kind.values())
 
     for index in range(len(candidates)):
         if index not in seen:
             repaired.append([index])
-            fixes += 1
+            types["omitted_candidate"] += 1
+
+    fixes = sum(types.values())
+    diag.repair(types)
 
     if fixes > max(5, len(candidates) // 2):
         raise ValueError(f"Clustering response too malformed ({fixes} fixes).")
 
     if fixes:
-        print(f"Clustering response repaired ({fixes} fixes).")
+        print(f"Clustering response repaired ({fixes} fixes: {dict(types)}).")
 
     return repaired
+
+
+def weak_links(candidates, vectors, members, threshold=WEAK_LINK_THRESHOLD):
+    """Members of multi-item clusters that barely resemble the others."""
+    found = []
+
+    for root, idx in members.items():
+        if len(idx) < 2:
+            continue
+        for i in idx:
+            best = max(cosine(vectors[i], vectors[j]) for j in idx if j != i)
+            if best < threshold:
+                found.append({
+                    "cluster": f"cluster-{root}",
+                    "cluster_size": len(idx),
+                    "similarity": round(best, 2),
+                    "source": candidates[i]["source"],
+                    "section": candidates[i]["section"],
+                    "title": candidates[i]["title"][:90],
+                })
+
+    found.sort(key=lambda r: r["similarity"])
+    return found
 
 
 def assign_event_ids(candidates, call_llm):
@@ -229,10 +263,13 @@ def assign_event_ids(candidates, call_llm):
         for index, item in enumerate(candidates)
     ]
 
+    ai_status = "failed"
+
     try:
         result = call_llm(
             CLUSTER_PROMPT,
             json.dumps(payload, ensure_ascii=False),
+            label="cluster",
         )
         groups = validate_groups(result, candidates)
 
@@ -240,9 +277,11 @@ def assign_event_ids(candidates, call_llm):
             for index in group[1:]:
                 union(group[0], index)
 
+        ai_status = "ok"
         print(f"AI clustering succeeded: {len(groups)} groups.")
 
     except Exception as exc:
+        diag.event("ai_clustering_failed", f"{type(exc).__name__}: {exc}")
         # Conservative fallback: keep candidates separate except for
         # exact headline matches below.
         print(
@@ -341,5 +380,51 @@ def assign_event_ids(candidates, call_llm):
             f"{a['source']}: {a['title'][:65]} | "
             f"{b['source']}: {b['title'][:65]}"
         )
+
+    # Weak links: members that barely resemble the rest of their cluster.
+    members = {}
+    for index in range(len(candidates)):
+        members.setdefault(find(index), []).append(index)
+
+    weak = weak_links(candidates, vectors, members)
+    print(f"Weak links (best similarity < {WEAK_LINK_THRESHOLD:.2f}): {len(weak)}")
+    for w in weak:
+        print(f"  {w['similarity']:.2f} {w['cluster']} (size {w['cluster_size']}) "
+              f"{w['source']}: {w['title'][:70]}")
+
+    def short(i, limit=80):
+        return f"{candidates[i]['source']}: {candidates[i]['title'][:limit]}"
+
+    diag.clusters({
+        "ai_clustering": ai_status,
+        "candidates": len(candidates),
+        "groups": len(members),
+        "size_histogram": dict(sorted(
+            Counter(len(v) for v in members.values()).items())),
+        "auto_merged": [
+            {"similarity": round(sim, 2), "a": short(a), "b": short(b)}
+            for sim, a, b in sorted(merged_pairs, reverse=True)
+        ],
+        "weak_links": weak,
+        "cross_section": [
+            {"cluster": f"cluster-{root}",
+             "sections": sorted({candidates[i]["section"] for i in idx})}
+            for root, idx in members.items()
+            if len({candidates[i]["section"] for i in idx}) > 1
+        ],
+        "multi_member_clusters": [
+            {"cluster": f"cluster-{root}",
+             "members": [
+                 {"source": candidates[i]["source"],
+                  "section": candidates[i]["section"],
+                  "title": candidates[i]["title"][:100]}
+                 for i in idx]}
+            for root, idx in members.items() if len(idx) > 1
+        ],
+        "audit_pairs": [
+            {"similarity": round(sim, 2), "a": short(a), "b": short(b)}
+            for sim, a, b in possible[:MAX_AUDIT_PAIRS]
+        ],
+    })
 
     return candidates
