@@ -1,0 +1,181 @@
+DIGEST RUN 2026-11-21T19:15:05.165905+00:00  status=ok  model=google/gemini-2.5-flash-lite  22.8s
+note: candidates_after_dedupe = 451
+
+USAGE: 6 calls, 41,547 tokens in, 3,288 out, cost $0.0055
+   cluster                     1 calls     4,669 in     273 out
+   selection:atlanta           1 calls     5,340 in     619 out
+   selection:global            1 calls     7,900 in     584 out
+   selection:opinion           1 calls     5,161 in     666 out
+   selection:turkey            1 calls     9,584 in     582 out
+   selection:us-politics       1 calls     8,893 in     564 out
+RETRIES: http=0 connection=0 unparseable_reply=0
+
+SECTIONS (events = distinct events among this section's picks after clustering)
+  section       cand picks events  pub/quota  stopped
+  us-politics    111    14      8        6/6  quota reached
+  global          89    14     11        6/6  quota reached
+  turkey          99    14      8        1/4  ran out of events
+  atlanta         75    15     12        4/4  quota reached (1 events already taken by an earlier section)
+  opinion         77    15     12        5/5  quota reached
+
+PICK POSITION (share of picks from each fifth of the list sent, front -> back)
+  us-politics   50%  14%  29%   7%   0%   <- front-loaded: possible position bias
+  global        43%  36%  14%   7%   0%   <- front-loaded: possible position bias
+  turkey        86%  14%   0%   0%   0%   <- front-loaded: possible position bias
+  atlanta       33%   0%   7%  13%  47%
+  opinion       53%  20%   0%   7%  20%   <- front-loaded: possible position bias
+
+SOURCE YIELD (sent -> picked -> published)
+  atlanta      AJC             25 ->   5 ->   1
+  atlanta      GPB             25 ->   9 ->   2
+  atlanta      WSB-TV          25 ->   1 ->   1
+  global       AP              25 ->   1 ->   1
+  global       BBC             20 ->   2 ->   1
+  global       Guardian        20 ->   4 ->   1
+  global       HDN              0 ->   0 ->   1
+  global       NYT             15 ->   6 ->   2
+  global       Reuters         25 ->   1 ->   0
+  opinion      AJC             25 ->   1 ->   1
+  opinion      BBC             25 ->   0 ->   0   <- zero picks
+  opinion      NPR             12 ->   1 ->   1
+  opinion      NYT             20 ->  10 ->   2
+  opinion      Sözcü            4 ->   0 ->   0
+  opinion      T24             13 ->   3 ->   1
+  turkey       BBC Türkçe      12 ->   2 ->   1
+  turkey       Cumhuriyet      12 ->   0 ->   0   <- zero picks
+  turkey       HDN             20 ->  12 ->   0
+  turkey       Now TV          25 ->   0 ->   0   <- zero picks
+  turkey       Sözcü           12 ->   0 ->   0   <- zero picks
+  turkey       T24             25 ->   0 ->   0   <- zero picks
+  us-politics  AP              25 ->   5 ->   1
+  us-politics  BBC             25 ->   3 ->   2
+  us-politics  NPR             10 ->   0 ->   0   <- zero picks
+  us-politics  NYT             25 ->   5 ->   3
+  us-politics  PBS NewsHour    19 ->   1 ->   0
+  us-politics  ProPublica      11 ->   0 ->   0   <- zero picks
+
+ZERO-PICK SOURCES (first titles, to judge: junk feed or ignored?)
+  us-politics | NPR
+      How a GOP redistricting 'dummymander' in North Carolina backfired by 2 seats
+      The New Yorker's Jason Zengerle on Hakeem Jeffries' rise to first Black House speaker
+      Week in Politics: Trump returns from Asia; hails trip as one of best in history
+  us-politics | ProPublica
+      Why Is the World Still Counting on Unproven Carbon Capture Technology?
+      A Texas Police Department Got $100K After a Single Immigration Arrest. It Stands to Earn M
+      Ohio Jobs Program Wants Its Money Back After Company’s Failure to Deliver GMO Salmon
+  turkey | Cumhuriyet
+      Balkan mutfak kültürünün Saraybosna klasiği: Boşnak Böreği
+      Oyuncu Çiğdem Batur hakkında soruşturma başlatıldı: Sultanahmet Camii paylaşımı gerekçe gö
+      CANLI ANLATIM: Galatasaray - Samsunspor | Trendyol Süper Lig 12. hafta karşılaşması
+  turkey | Sözcü
+      Antalya'da korkunç olay: Önce eşini vurdu, ardından intihar etti
+      Yemen’e Türk askeri gönderilecek mi? Dışişleri Bakanı Hakan Fidan açıkladı
+      Tanju Özcan'a adli kontrol şartı ile tahliye
+  turkey | T24
+      Bolu Belediye Başkanı Tanju Özcan hakkında adli kontrol ile tahliye kararı; farklı dosyada
+      Bolu Belediye Başkanı Tanju Özcan'a adli kontrol şartı ile tahliye
+      CANLI | Kocaelispor 0-0 Fenerbahçe
+  turkey | Now TV
+      Halef: Köklerin Çağrısı Dizisi 43 Bölüm
+      Ömür Usta Dizisi 8 Bölüm
+      Yeraltı Dizisi 23 Bölüm
+  opinion | BBC
+      Politically | 1956: End of Illusion | 5. Lie
+      Newscast | Is The UK Ready To Reopen The Brexit Debate?
+      BBC Home | Breaking News, World News, US News, Sports, Business, Innovation, Climate, Cult
+  opinion | Sözcü
+      Bir sakız, bir lokma yemek… Bu şehirde en sıradan alışkanlıklar bile yasak
+      Fatih’in ortasında mezarda bulundu: Duyan görmek için bölgeye akın etti
+      İçme suyunun içine bırakılan 96 milyon siyah top hesapları değiştirdi
+
+CLUSTERING
+  AI clustering: ok   70 candidates -> 49 groups   sizes {1: 38, 2: 5, 3: 2, 4: 4}
+  response repairs: none
+  auto-merged by similarity: 1
+      0.43  NYT: Advice to Democrats: Impeach Trump’s Cabinet  |  NYT: Trump Got Together With the Boys
+  WEAK LINKS (1): cluster members barely similar to the rest; review for false merges
+      0.06 cluster-59 (size 3) NYT: ‘It’s Easier Said Than Done’: 3 Opinion Writers on How to Check Trump
+  CROSS-SECTION clusters (2): one event seen in several sections; one copy is kept
+      cluster-3 ['atlanta', 'us-politics']
+      cluster-25 ['global', 'turkey']
+  MULTI-MEMBER clusters:
+      cluster-1 (2)
+          AP: FBI investigating apparent hack of a key criminal justice information database, AP source says
+          BBC: FBI reportedly investigating apparent hack of its criminal database
+      cluster-3 (3)
+          AP: S&P 500 sinks 3.7% and Nasdaq composite goes negative for the year as tech sell-off worsens
+          BBC: Tech stock sell-off drags markets down as Anthropic shares slide
+          GPB: S&P 500 sinks 3.7% and the Nasdaq composite goes negative for the year
+      cluster-9 (4)
+          NYT: Trump Threatens to Bar U.S. Tech Firms From Building Data Centers Abroad
+          AP: Trump seeks to penalize US companies that build AI data centers abroad, even as they face backlash
+          BBC: Trump threatens ban on US firms building AI data centres overseas
+          PBS NewsHour: WATCH: Trump on data centers: 'Take advantage, don't shut them off'
+      cluster-13 (4)
+          Guardian: Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid
+          AP: Mexico detains top cartel boss ‘El Chapo Isidro,’ setting off a burst of violence in Sinaloa
+          NYT: Who Is the Mexican Drug Kingpin Known as El Chapo Isidro?
+          GPB: Mexico detains top cartel boss 'El Chapo Isidro,' setting off violence
+      cluster-18 (4)
+          Guardian: International UN talks on controlling use of autonomous weapons collapse
+          NYT: U.N. Fails to Regulate Lethal Autonomous Weapons, but Plans to Try Again
+          GPB: Killer robots: U.N. talks fall short of hopes for legally binding rules
+          GPB: Nations at UN talks on AI killer robots agree to more talks but no firm commitment to rein them in
+      cluster-19 (2)
+          NYT: Iraqi Forces Enter Stronghold of Powerful Iran-Backed Militia
+          HDN: Iraqi forces enter stronghold of Iran-backed group
+      cluster-20 (2)
+          BBC: Russia-bound ship attacked in Gulf of Finland
+          Reuters: Russian cargo ship hit by drones in Baltic, Finland tightens security
+      cluster-23 (2)
+          NYT: Catherine, Princess of Wales, Documents Life With Cancer in BBC Film
+          Guardian: Princess of Wales speaks about impact of cancer diagnosis in BBC film Heal
+      cluster-25 (4)
+          BBC: Fight over fossil fuels leaves COP31 climate talks in deadlock
+          BBC Türkçe: COP31 müzakereleri fosil yakıt tartışmalarında düğümlendi
+          HDN: COP31 talks extended as countries seek final deal
+          BBC Türkçe: Elektrifikasyon neden tartışılıyor, Türkiye yüzde 35 hedefini tutturabilir mi?
+      cluster-33 (2)
+          HDN: Türkiye to submit visa liberalization draft to parliament
+          HDN: Working group set up to review Schengen visa procedures for Turkish citizens
+      cluster-59 (3)
+          NYT: ‘It’s Easier Said Than Done’: 3 Opinion Writers on How to Check Trump
+          NYT: Advice to Democrats: Impeach Trump’s Cabinet
+          NYT: Trump Got Together With the Boys
+  LEXICAL AUDIT (similar but not merged): 0 shown
+
+SCORES (min / median / max)
+  us-politics   picks 7 / 7.5 / 9      published 7 / 8.0 / 9
+  global        picks 6 / 8.0 / 9      published 7 / 8.0 / 9
+  turkey        picks 5 / 7.0 / 8      published 6 / 6 / 6
+  atlanta       picks 6 / 7 / 8        published 7 / 8.0 / 8
+  opinion       picks 5 / 6.0 / 8      published 5 / 5 / 8
+
+PUBLISHED (22) section | score | age | source | title
+ * us-politics    9    0.1h  NYT: Tech Outages Are Only the Beginning. A.I. Will Bring More Disruptions.
+   us-politics    8    2.7h  BBC: FBI reportedly investigating apparent hack of its criminal database
+   us-politics    8    2.1h  AP: Trump orders federal contractors to check with White House before responding to Congress
+   us-politics    8   20.5h  BBC: Tech stock sell-off drags markets down as Anthropic shares slide
+   us-politics    7    5.3h  NYT: A New Trump Tactic to Restrict Transit Funding: Rewrite the Rules
+   us-politics    7    3.6h  NYT: It’s a Bill on Energy Permits, but Trump’s Pet Projects Are Part of the Debate
+ * global         9   21.0h  AP: Russian missiles land in Poland, as Europe held military drills nearby. NATO calls it a violation
+   global         9    2.7h  NYT: Who Is the Mexican Drug Kingpin Known as El Chapo Isidro?
+   global         8   32.1h  HDN: ICJ’s Myanmar genocide ruling could shape case against Israel
+   global         8    0.9h  BBC: Russia-bound ship attacked in Gulf of Finland
+   global         7    0.9h  Guardian: Suffolk village votes to ‘leave the UK’ over plans to house asylum seekers nearby
+   global         8   12.1h  NYT: Iraqi Forces Enter Stronghold of Powerful Iran-Backed Militia
+ * turkey         6    9.6h  BBC Türkçe: COP31 müzakereleri fosil yakıt tartışmalarında düğümlendi
+ * atlanta        8   26.2h  GPB: Lawmakers call for forensic audit of Georgia child welfare agency’s spending
+   atlanta        8    9.3h  AJC: Philanthropist MacKenzie Scott gives millions more to Georgia education organizations
+   atlanta        7   18.4h  WSB-TV: Data shows Georgia hospitals save more in taxes while spending less helping the community
+   atlanta        8   26.8h  GPB: Stacey Abrams plans to refocus her Fair Fight voting rights group on threats to democracy
+ * opinion        8   21.7h  NYT: How Do You Investigate a President This Corrupt?
+   opinion        5   28.7h  AJC: As Thanksgiving approaches, metro Atlanta food prices continue to soar
+   opinion        5   57.3h  NPR: Ben Shapiro says 'whiff of corruption' surrounds the president he campaigned for
+   opinion        5   38.5h  T24: Zeydan Karalar'dan Özgür Özel'in sitemine yanıt: Canı sağ olsun, vefasız değilim
+   opinion        7   20.8h  NYT: The System Is ‘Stacked’ Against the Young
+
+POSSIBLE REPEATS OF THE LAST 3 DAYS (similarity >= 0.3; may be updates, not repeats)
+  (none found, or no earlier runs on file)
+
+FEED PROBLEMS (0)

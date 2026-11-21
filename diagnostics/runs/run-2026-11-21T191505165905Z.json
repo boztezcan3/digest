@@ -1,0 +1,1003 @@
+{
+ "started": "2026-11-21T19:15:05.165905+00:00",
+ "model": "google/gemini-2.5-flash-lite",
+ "status": "ok",
+ "error": null,
+ "notes": {
+  "candidates_after_dedupe": 451
+ },
+ "counters": {},
+ "events": [],
+ "feeds": [
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "returned": 20,
+   "in_window": 20,
+   "unseen": 18,
+   "sent": 15,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "returned": 20,
+   "in_window": 20,
+   "unseen": 19,
+   "sent": 10,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "AP",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 99,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "BBC",
+   "returned": 33,
+   "in_window": 31,
+   "unseen": 28,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "PBS NewsHour",
+   "returned": 20,
+   "in_window": 20,
+   "unseen": 19,
+   "sent": 19,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "NPR",
+   "returned": 10,
+   "in_window": 10,
+   "unseen": 10,
+   "sent": 10,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "ProPublica",
+   "returned": 20,
+   "in_window": 11,
+   "unseen": 11,
+   "sent": 11,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "returned": 52,
+   "in_window": 52,
+   "unseen": 47,
+   "sent": 15,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "Guardian",
+   "returned": 45,
+   "in_window": 42,
+   "unseen": 41,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "BBC",
+   "returned": 26,
+   "in_window": 26,
+   "unseen": 24,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "AP",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 99,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "Reuters",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "HDN",
+   "returned": 64,
+   "in_window": 22,
+   "unseen": 21,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "BBC Türkçe",
+   "returned": 16,
+   "in_window": 15,
+   "unseen": 13,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "Cumhuriyet",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "Sözcü",
+   "returned": 50,
+   "in_window": 50,
+   "unseen": 50,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "T24",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 99,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "Now TV",
+   "returned": 60,
+   "in_window": 57,
+   "unseen": 57,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "atlanta",
+   "source": "AJC",
+   "returned": 96,
+   "in_window": 94,
+   "unseen": 90,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "atlanta",
+   "source": "WSB-TV",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 98,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "atlanta",
+   "source": "GPB",
+   "returned": 100,
+   "in_window": 57,
+   "unseen": 52,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "returned": 50,
+   "in_window": 50,
+   "unseen": 46,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "NPR",
+   "returned": 13,
+   "in_window": 12,
+   "unseen": 12,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "BBC",
+   "returned": 65,
+   "in_window": 65,
+   "unseen": 64,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "T24",
+   "returned": 15,
+   "in_window": 15,
+   "unseen": 13,
+   "sent": 13,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "AJC",
+   "returned": 81,
+   "in_window": 78,
+   "unseen": 74,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "Sözcü",
+   "returned": 4,
+   "in_window": 4,
+   "unseen": 4,
+   "sent": 4,
+   "error": null
+  }
+ ],
+ "usage": {
+  "calls": 6,
+  "prompt_tokens": 41547,
+  "completion_tokens": 3288,
+  "cost": 0.0054699,
+  "by_label": {
+   "selection:us-politics": {
+    "calls": 1,
+    "prompt_tokens": 8893,
+    "completion_tokens": 564
+   },
+   "selection:global": {
+    "calls": 1,
+    "prompt_tokens": 7900,
+    "completion_tokens": 584
+   },
+   "selection:turkey": {
+    "calls": 1,
+    "prompt_tokens": 9584,
+    "completion_tokens": 582
+   },
+   "selection:atlanta": {
+    "calls": 1,
+    "prompt_tokens": 5340,
+    "completion_tokens": 619
+   },
+   "selection:opinion": {
+    "calls": 1,
+    "prompt_tokens": 5161,
+    "completion_tokens": 666
+   },
+   "cluster": {
+    "calls": 1,
+    "prompt_tokens": 4669,
+    "completion_tokens": 273
+   }
+  }
+ },
+ "selection": {
+  "us-politics": {
+   "candidates": 111,
+   "picks": 14,
+   "position_quintiles": [
+    7,
+    2,
+    4,
+    1,
+    0
+   ],
+   "by_source_candidates": {
+    "NYT": 21,
+    "AP": 25,
+    "BBC": 25,
+    "PBS NewsHour": 19,
+    "NPR": 10,
+    "ProPublica": 11
+   },
+   "by_source_picks": {
+    "NYT": 5,
+    "AP": 5,
+    "BBC": 3,
+    "PBS NewsHour": 1
+   },
+   "zero_pick_sources": {
+    "NPR": [
+     "How a GOP redistricting 'dummymander' in North Carolina backfired by 2 seats",
+     "The New Yorker's Jason Zengerle on Hakeem Jeffries' rise to first Black House speaker",
+     "Week in Politics: Trump returns from Asia; hails trip as one of best in history"
+    ],
+    "ProPublica": [
+     "Why Is the World Still Counting on Unproven Carbon Capture Technology?",
+     "A Texas Police Department Got $100K After a Single Immigration Arrest. It Stands to Earn M",
+     "Ohio Jobs Program Wants Its Money Back After Company’s Failure to Deliver GMO Salmon"
+    ]
+   },
+   "score_min": 7,
+   "score_median": 7.5,
+   "score_max": 9
+  },
+  "global": {
+   "candidates": 89,
+   "picks": 14,
+   "position_quintiles": [
+    6,
+    5,
+    2,
+    1,
+    0
+   ],
+   "by_source_candidates": {
+    "NYT": 15,
+    "Guardian": 20,
+    "BBC": 13,
+    "AP": 16,
+    "Reuters": 25
+   },
+   "by_source_picks": {
+    "NYT": 6,
+    "Guardian": 4,
+    "BBC": 2,
+    "AP": 1,
+    "Reuters": 1
+   },
+   "zero_pick_sources": {},
+   "score_min": 6,
+   "score_median": 8.0,
+   "score_max": 9
+  },
+  "turkey": {
+   "candidates": 99,
+   "picks": 14,
+   "position_quintiles": [
+    12,
+    2,
+    0,
+    0,
+    0
+   ],
+   "by_source_candidates": {
+    "HDN": 20,
+    "BBC Türkçe": 12,
+    "Cumhuriyet": 12,
+    "Sözcü": 12,
+    "T24": 25,
+    "Now TV": 18
+   },
+   "by_source_picks": {
+    "HDN": 12,
+    "BBC Türkçe": 2
+   },
+   "zero_pick_sources": {
+    "Cumhuriyet": [
+     "Balkan mutfak kültürünün Saraybosna klasiği: Boşnak Böreği",
+     "Oyuncu Çiğdem Batur hakkında soruşturma başlatıldı: Sultanahmet Camii paylaşımı gerekçe gö",
+     "CANLI ANLATIM: Galatasaray - Samsunspor | Trendyol Süper Lig 12. hafta karşılaşması"
+    ],
+    "Sözcü": [
+     "Antalya'da korkunç olay: Önce eşini vurdu, ardından intihar etti",
+     "Yemen’e Türk askeri gönderilecek mi? Dışişleri Bakanı Hakan Fidan açıkladı",
+     "Tanju Özcan'a adli kontrol şartı ile tahliye"
+    ],
+    "T24": [
+     "Bolu Belediye Başkanı Tanju Özcan hakkında adli kontrol ile tahliye kararı; farklı dosyada",
+     "Bolu Belediye Başkanı Tanju Özcan'a adli kontrol şartı ile tahliye",
+     "CANLI | Kocaelispor 0-0 Fenerbahçe"
+    ],
+    "Now TV": [
+     "Halef: Köklerin Çağrısı Dizisi 43 Bölüm",
+     "Ömür Usta Dizisi 8 Bölüm",
+     "Yeraltı Dizisi 23 Bölüm"
+    ]
+   },
+   "score_min": 5,
+   "score_median": 7.0,
+   "score_max": 8
+  },
+  "atlanta": {
+   "candidates": 75,
+   "picks": 15,
+   "position_quintiles": [
+    5,
+    0,
+    1,
+    2,
+    7
+   ],
+   "by_source_candidates": {
+    "AJC": 25,
+    "WSB-TV": 25,
+    "GPB": 25
+   },
+   "by_source_picks": {
+    "AJC": 5,
+    "WSB-TV": 1,
+    "GPB": 9
+   },
+   "zero_pick_sources": {},
+   "score_min": 6,
+   "score_median": 7,
+   "score_max": 8
+  },
+  "opinion": {
+   "candidates": 77,
+   "picks": 15,
+   "position_quintiles": [
+    8,
+    3,
+    0,
+    1,
+    3
+   ],
+   "by_source_candidates": {
+    "NYT": 20,
+    "NPR": 12,
+    "BBC": 25,
+    "T24": 13,
+    "AJC": 3,
+    "Sözcü": 4
+   },
+   "by_source_picks": {
+    "NYT": 10,
+    "NPR": 1,
+    "T24": 3,
+    "AJC": 1
+   },
+   "zero_pick_sources": {
+    "BBC": [
+     "Politically | 1956: End of Illusion | 5. Lie",
+     "Newscast | Is The UK Ready To Reopen The Brexit Debate?",
+     "BBC Home | Breaking News, World News, US News, Sports, Business, Innovation, Climate, Cult"
+    ],
+    "Sözcü": [
+     "Bir sakız, bir lokma yemek… Bu şehirde en sıradan alışkanlıklar bile yasak",
+     "Fatih’in ortasında mezarda bulundu: Duyan görmek için bölgeye akın etti",
+     "İçme suyunun içine bırakılan 96 milyon siyah top hesapları değiştirdi"
+    ]
+   },
+   "score_min": 5,
+   "score_median": 6.0,
+   "score_max": 8
+  }
+ },
+ "sections": {
+  "us-politics": {
+   "quota": 6,
+   "published": 6,
+   "distinct_events": 8,
+   "taken_by_earlier_section": 0,
+   "stopped": "quota reached"
+  },
+  "global": {
+   "quota": 6,
+   "published": 6,
+   "distinct_events": 11,
+   "taken_by_earlier_section": 0,
+   "stopped": "quota reached"
+  },
+  "turkey": {
+   "quota": 4,
+   "published": 1,
+   "distinct_events": 8,
+   "taken_by_earlier_section": 0,
+   "stopped": "ran out of events"
+  },
+  "atlanta": {
+   "quota": 4,
+   "published": 4,
+   "distinct_events": 12,
+   "taken_by_earlier_section": 1,
+   "stopped": "quota reached"
+  },
+  "opinion": {
+   "quota": 5,
+   "published": 5,
+   "distinct_events": 12,
+   "taken_by_earlier_section": 0,
+   "stopped": "quota reached"
+  }
+ },
+ "clusters": {
+  "ai_clustering": "ok",
+  "candidates": 70,
+  "groups": 49,
+  "size_histogram": {
+   "1": 38,
+   "2": 5,
+   "3": 2,
+   "4": 4
+  },
+  "auto_merged": [
+   {
+    "similarity": 0.43,
+    "a": "NYT: Advice to Democrats: Impeach Trump’s Cabinet",
+    "b": "NYT: Trump Got Together With the Boys"
+   }
+  ],
+  "weak_links": [
+   {
+    "cluster": "cluster-59",
+    "cluster_size": 3,
+    "similarity": 0.06,
+    "source": "NYT",
+    "section": "opinion",
+    "title": "‘It’s Easier Said Than Done’: 3 Opinion Writers on How to Check Trump"
+   }
+  ],
+  "cross_section": [
+   {
+    "cluster": "cluster-3",
+    "sections": [
+     "atlanta",
+     "us-politics"
+    ]
+   },
+   {
+    "cluster": "cluster-25",
+    "sections": [
+     "global",
+     "turkey"
+    ]
+   }
+  ],
+  "multi_member_clusters": [
+   {
+    "cluster": "cluster-1",
+    "members": [
+     {
+      "source": "AP",
+      "section": "us-politics",
+      "title": "FBI investigating apparent hack of a key criminal justice information database, AP source says"
+     },
+     {
+      "source": "BBC",
+      "section": "us-politics",
+      "title": "FBI reportedly investigating apparent hack of its criminal database"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-3",
+    "members": [
+     {
+      "source": "AP",
+      "section": "us-politics",
+      "title": "S&P 500 sinks 3.7% and Nasdaq composite goes negative for the year as tech sell-off worsens"
+     },
+     {
+      "source": "BBC",
+      "section": "us-politics",
+      "title": "Tech stock sell-off drags markets down as Anthropic shares slide"
+     },
+     {
+      "source": "GPB",
+      "section": "atlanta",
+      "title": "S&P 500 sinks 3.7% and the Nasdaq composite goes negative for the year"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-9",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "us-politics",
+      "title": "Trump Threatens to Bar U.S. Tech Firms From Building Data Centers Abroad"
+     },
+     {
+      "source": "AP",
+      "section": "us-politics",
+      "title": "Trump seeks to penalize US companies that build AI data centers abroad, even as they face backlash"
+     },
+     {
+      "source": "BBC",
+      "section": "us-politics",
+      "title": "Trump threatens ban on US firms building AI data centres overseas"
+     },
+     {
+      "source": "PBS NewsHour",
+      "section": "us-politics",
+      "title": "WATCH: Trump on data centers: 'Take advantage, don't shut them off'"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-13",
+    "members": [
+     {
+      "source": "Guardian",
+      "section": "global",
+      "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid"
+     },
+     {
+      "source": "AP",
+      "section": "global",
+      "title": "Mexico detains top cartel boss ‘El Chapo Isidro,’ setting off a burst of violence in Sinaloa"
+     },
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "Who Is the Mexican Drug Kingpin Known as El Chapo Isidro?"
+     },
+     {
+      "source": "GPB",
+      "section": "global",
+      "title": "Mexico detains top cartel boss 'El Chapo Isidro,' setting off violence"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-18",
+    "members": [
+     {
+      "source": "Guardian",
+      "section": "global",
+      "title": "International UN talks on controlling use of autonomous weapons collapse"
+     },
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "U.N. Fails to Regulate Lethal Autonomous Weapons, but Plans to Try Again"
+     },
+     {
+      "source": "GPB",
+      "section": "global",
+      "title": "Killer robots: U.N. talks fall short of hopes for legally binding rules"
+     },
+     {
+      "source": "GPB",
+      "section": "global",
+      "title": "Nations at UN talks on AI killer robots agree to more talks but no firm commitment to rein them in"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-19",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "Iraqi Forces Enter Stronghold of Powerful Iran-Backed Militia"
+     },
+     {
+      "source": "HDN",
+      "section": "global",
+      "title": "Iraqi forces enter stronghold of Iran-backed group"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-20",
+    "members": [
+     {
+      "source": "BBC",
+      "section": "global",
+      "title": "Russia-bound ship attacked in Gulf of Finland"
+     },
+     {
+      "source": "Reuters",
+      "section": "global",
+      "title": "Russian cargo ship hit by drones in Baltic, Finland tightens security"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-23",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film"
+     },
+     {
+      "source": "Guardian",
+      "section": "global",
+      "title": "Princess of Wales speaks about impact of cancer diagnosis in BBC film Heal"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-25",
+    "members": [
+     {
+      "source": "BBC",
+      "section": "global",
+      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock"
+     },
+     {
+      "source": "BBC Türkçe",
+      "section": "turkey",
+      "title": "COP31 müzakereleri fosil yakıt tartışmalarında düğümlendi"
+     },
+     {
+      "source": "HDN",
+      "section": "turkey",
+      "title": "COP31 talks extended as countries seek final deal"
+     },
+     {
+      "source": "BBC Türkçe",
+      "section": "turkey",
+      "title": "Elektrifikasyon neden tartışılıyor, Türkiye yüzde 35 hedefini tutturabilir mi?"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-33",
+    "members": [
+     {
+      "source": "HDN",
+      "section": "turkey",
+      "title": "Türkiye to submit visa liberalization draft to parliament"
+     },
+     {
+      "source": "HDN",
+      "section": "turkey",
+      "title": "Working group set up to review Schengen visa procedures for Turkish citizens"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-59",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "opinion",
+      "title": "‘It’s Easier Said Than Done’: 3 Opinion Writers on How to Check Trump"
+     },
+     {
+      "source": "NYT",
+      "section": "opinion",
+      "title": "Advice to Democrats: Impeach Trump’s Cabinet"
+     },
+     {
+      "source": "NYT",
+      "section": "opinion",
+      "title": "Trump Got Together With the Boys"
+     }
+    ]
+   }
+  ],
+  "audit_pairs": []
+ },
+ "repairs": {},
+ "published": [
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "Tech Outages Are Only the Beginning. A.I. Will Bring More Disruptions.",
+   "link": "https://www.nytimes.com/2026/11/21/us/politics/tech-outages-ai-disruptions.html",
+   "score": 9,
+   "star": true,
+   "age_hours": 0.1,
+   "summary": "AI is exposing decades of cybersecurity vulnerabilities, with tech outages being just the beginning of future disruptions."
+  },
+  {
+   "section": "us-politics",
+   "source": "BBC",
+   "title": "FBI reportedly investigating apparent hack of its criminal database",
+   "link": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o?at_medium=RSS&at_campaign=rss",
+   "score": 8,
+   "star": false,
+   "age_hours": 2.7,
+   "summary": "The FBI is reportedly investigating an apparent hack of its criminal database, which law enforcement uses for information sharing."
+  },
+  {
+   "section": "us-politics",
+   "source": "AP",
+   "title": "Trump orders federal contractors to check with White House before responding to Congress",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNcGJaYVIzb00tWkFac2pEaFdTRnVFYWFTRHVZeWtRU1ZuMUZCSXVnOTAyUU9WSHVmWHEtaTdSQlF0eUpoTHBVeXhUYTVseTY0SXZmX2pTVWNDR19fVlhBYlVxZzdHSURLekxjd3daXzZ2V0R5V0xiUXNCQ0ZoRWZHVDNpS0ZHSF9VTEVPVFAzWjI4Q2lzLW5TSElRa3FGTDlGR2xCU3VOTzB4MGtiaFRQOE9kbkxFbEJVYWw5c0dvRjlseG94?oc=5",
+   "score": 8,
+   "star": false,
+   "age_hours": 2.1,
+   "summary": "President Trump has ordered federal contractors to seek White House approval before responding to congressional requests."
+  },
+  {
+   "section": "us-politics",
+   "source": "BBC",
+   "title": "Tech stock sell-off drags markets down as Anthropic shares slide",
+   "link": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
+   "score": 8,
+   "star": false,
+   "age_hours": 20.5,
+   "summary": "A tech stock sell-off dragged down US markets, pushing the S&P 500 and Dow Jones into correction territory."
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "A New Trump Tactic to Restrict Transit Funding: Rewrite the Rules",
+   "link": "https://www.nytimes.com/2026/11/21/upshot/trump-transit-grants.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 5.3,
+   "summary": "New rules proposed by Trump could make it harder for numerous US projects to secure transit funding."
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "It’s a Bill on Energy Permits, but Trump’s Pet Projects Are Part of the Debate",
+   "link": "https://www.nytimes.com/2026/11/20/us/politics/baaja-permitting-bill-trump.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 3.6,
+   "summary": "President Trump's influence is felt in bipartisan legislation aimed at speeding up energy project construction."
+  },
+  {
+   "section": "global",
+   "source": "AP",
+   "title": "Russian missiles land in Poland, as Europe held military drills nearby. NATO calls it a violation",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNXhFLWVHeVA2TTIyRTRBRklRM29NQlpLTkNSbkdUYlNWVTNLek1BNG52cDFJRjNNVGNxNW04V3RDTEJPNGtDZ1R6WXE5TVV3SDJhQkFDRVFEMXZaTF92aWhZdS1xS1A0QnR2dE9selFRNGJYclZkRmdKUlJrWjB3VGxzTFE3aVBjYWJCUXhsM0Q1Sk5qR1U3TFlIekxkUE43MUNNenk2bw?oc=5",
+   "score": 9,
+   "star": true,
+   "age_hours": 21.0,
+   "summary": "Russian missiles landed in Poland during nearby military drills, prompting NATO to call it a violation."
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "title": "Who Is the Mexican Drug Kingpin Known as El Chapo Isidro?",
+   "link": "https://www.nytimes.com/2026/11/21/world/americas/mexico-el-chapo-isidro-drug-kingpin.html",
+   "score": 9,
+   "star": false,
+   "age_hours": 2.7,
+   "summary": "The kingpin, Fausto Isidro Meza Flores, one of the FBI’s 10 most wanted, was captured in a violent operation in Mexico."
+  },
+  {
+   "section": "global",
+   "source": "HDN",
+   "title": "ICJ’s Myanmar genocide ruling could shape case against Israel",
+   "link": "https://www.hurriyetdailynews.com/icjs-myanmar-genocide-ruling-could-shape-case-against-israel-229650",
+   "score": 8,
+   "star": false,
+   "age_hours": 32.1,
+   "summary": "ICJ's Myanmar genocide ruling could influence the case against Israel regarding actions against Palestinians."
+  },
+  {
+   "section": "global",
+   "source": "BBC",
+   "title": "Russia-bound ship attacked in Gulf of Finland",
+   "link": "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss",
+   "score": 8,
+   "star": false,
+   "age_hours": 0.9,
+   "summary": "Finnish defense forces believe Ukraine was likely behind a drone attack on a Russian-bound ship in the Gulf of Finland."
+  },
+  {
+   "section": "global",
+   "source": "Guardian",
+   "title": "Suffolk village votes to ‘leave the UK’ over plans to house asylum seekers nearby",
+   "link": "https://www.theguardian.com/uk-news/2026/nov/21/suffolk-village-votes-to-leave-the-uk-over-plans-to-house-asylum-seekers-nearby",
+   "score": 7,
+   "star": false,
+   "age_hours": 0.9,
+   "summary": "Residents of a Suffolk village voted to “leave the UK” in a symbolic referendum opposing plans to house asylum seekers nearby."
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "title": "Iraqi Forces Enter Stronghold of Powerful Iran-Backed Militia",
+   "link": "https://www.nytimes.com/2026/11/20/world/middleeast/iraq-militia-iran-kataib-hezbollah.html",
+   "score": 8,
+   "star": false,
+   "age_hours": 12.1,
+   "summary": "Iraqi forces entered the stronghold of Iran-backed militia Kataib Hezbollah, territory controlled by the group for over a decade."
+  },
+  {
+   "section": "turkey",
+   "source": "BBC Türkçe",
+   "title": "COP31 müzakereleri fosil yakıt tartışmalarında düğümlendi",
+   "link": "https://www.bbc.com/turkce/articles/cq8j40d29kneo?at_medium=RSS&at_campaign=rss",
+   "score": 6,
+   "star": true,
+   "age_hours": 9.6,
+   "summary": "COP31 climate talks in Antalya stalled over fossil fuel discussions, with delegates continuing negotiations for a final agreement."
+  },
+  {
+   "section": "atlanta",
+   "source": "GPB",
+   "title": "Lawmakers call for forensic audit of Georgia child welfare agency’s spending",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeDBycHFOZldvZlhCc25LamNYd2VIUFB1WFZsNEJLMnBxNlJpTzA3bWlKVUNEa0NPa2pxelNGVGswelJBSDZNVmV2akllRlUxNldrMldVU2pMeUVYemhhUlViLVI1TTF1bzZsbWIyOEd2VnBndmZQUk5wU3V0TFFQbW00NW4xMFNfNU5Dc2xkdGwxeDMwRTF0MjYxcV90dlg2ZTVNS0g4bkh5TGROeG9jOA?oc=5",
+   "score": 8,
+   "star": true,
+   "age_hours": 26.2,
+   "summary": "Lawmakers are calling for a forensic audit of Georgia's child welfare agency spending."
+  },
+  {
+   "section": "atlanta",
+   "source": "AJC",
+   "title": "Philanthropist MacKenzie Scott gives millions more to Georgia education organizations",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQWXEzWnQ4aEwyRTRMRjNDN2pNTVplR1NnNkhoT0RMQ08tMzN2V0Y1RW5lMmNzUFlfNmtJM1BYMnRVUktCdmE1bmQxdERha1VxVmRnSm8xYlhNV24zRjhKQ29DRUU0ZDF3WmlfY3BvRGJQNUEyMVRQRG9PRXlwS3Z4NzRn?oc=5",
+   "score": 8,
+   "star": false,
+   "age_hours": 9.3,
+   "summary": "Philanthropist MacKenzie Scott has donated millions more to Georgia education organizations."
+  },
+  {
+   "section": "atlanta",
+   "source": "WSB-TV",
+   "title": "Data shows Georgia hospitals save more in taxes while spending less helping the community",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPd1d1QXRkbG90a3VRLURBS0diRmNpS3hmY25EYUNsczQ5M1lkMWg3cjNQQ3BHQWZ4b1pkWkVpTWVJcktYM01PMHFSSkRYTTJkOTR0Y0JTQTROQ3JmYlBnd2tVYXhsbXI2eEZuUjlBZUFBaTdhUDZvQnFFWnl3b2tKYjdqQnlNbktDQVNMaHI2Z2ZGcmJNR0NQdFJ6MU02X1daaWlDSUpsb1VyckNLTnZ6bzNzX2pPX3pqcEk0UWZleko5TnhPUnh6a3U4WGlucy1KWWZXTjNjX3NyU3fSAe8BQVVfeXFMTmJEY2xyN0xyNHhLN2JYRFU1SzhlWkZuU1plVm1ESXJWX2w5blRYcnpvY1E5bVJYNHJPU2lWbTJVcmlibXVzenBFWDk3SW9qZGJHSWlTWTRVT0JOaXVYbnFOY3duYUx6STNlZW43Y2xjUXpRZTlQSExXcmpJM3lhbHo2VHA3bl8xOWxheC00bEJyRThGQXVfdkZtdUFkQ21JbF8wazM2SkktSWR0ck1UaFBBYzZzNW5XM3RTVlJpS1FUYTZpSzQyaE52WXFqdk1PYlhpUWlOaWdKZjhKbUlPYVRmWnUxSnNaZnV3OUxzRlE?oc=5",
+   "score": 7,
+   "star": false,
+   "age_hours": 18.4,
+   "summary": "Data indicates Georgia hospitals save on taxes while spending less on community aid."
+  },
+  {
+   "section": "atlanta",
+   "source": "GPB",
+   "title": "Stacey Abrams plans to refocus her Fair Fight voting rights group on threats to democracy",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZlBVcU9aVlUzMGdMcHh6aFM2TmNvMlJoQmV1ZTBDblpIb21zT3JZdjJGRmRNaTR0M2RVT2JpWURCaUYzSEpBTGhxeVJNcE1Hc1JFSDBTdW9lRENyTk9oSFRkSlZIbTgyODRqV0pJOTN2S2d0RnRFVFJnc0JGWl9HcFFoNmlQeWdtVEI5c3RwOFhEUU5xWm9JTHI0R0FwV1Iwd0N2Xzgyb244TTZUVHdlX0k3ZXVDQXV0UTFn?oc=5",
+   "score": 8,
+   "star": false,
+   "age_hours": 26.8,
+   "summary": "Stacey Abrams' Fair Fight group will refocus on threats to democracy."
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "title": "How Do You Investigate a President This Corrupt?",
+   "link": "https://www.nytimes.com/video/opinion/100000011295018/the-democrats-plan-for-investigating-trump.html",
+   "score": 8,
+   "star": true,
+   "age_hours": 21.7,
+   "summary": "Incoming House Oversight Committee chairman Robert Garcia outlines the committee's top targets for investigation."
+  },
+  {
+   "section": "opinion",
+   "source": "AJC",
+   "title": "As Thanksgiving approaches, metro Atlanta food prices continue to soar",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBGS1MwRTZSYnVkQU5hSkk1MUI4QWp0YWlKVWttMjI0Slp2bkxGSjhSZVpoS2RxcjRhcl9FOWFFeHFuOEJkX0Y4cnd2aDIwMVBzY0F3ZTZFbXI4Tk90dDRxWE40cFNhRWRselBlTWVOMA?oc=5",
+   "score": 5,
+   "star": false,
+   "age_hours": 28.7,
+   "summary": "Metro Atlanta food prices continue to rise significantly as the Thanksgiving holiday approaches."
+  },
+  {
+   "section": "opinion",
+   "source": "NPR",
+   "title": "Ben Shapiro says 'whiff of corruption' surrounds the president he campaigned for",
+   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XZW9DdFZXeFBBbWlaWHR3VUtIZXV4VzMxUGpQREFrbGtSZWlYOFlzUHNqYnE1TmVOWmpvcmVMZkktdlppWXZtdkdDTmlCR19rZlZ4Tkt0bS0?oc=5",
+   "score": 5,
+   "star": false,
+   "age_hours": 57.3,
+   "summary": "Ben Shapiro suggests a 'whiff of corruption' surrounds the president he previously supported."
+  },
+  {
+   "section": "opinion",
+   "source": "T24",
+   "title": "Zeydan Karalar'dan Özgür Özel'in sitemine yanıt: Canı sağ olsun, vefasız değilim",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUUJHelpLbjdId1NJMmdaeUg1UlZxelE4bnFrSXVQbnh4MG9ISFhheWhhSVZjcEp3c0JjQmNPMzh3cXlKUENELUFnVWx0bWlxc3FJYzZXdklIR2xYaE9fWVFjRzhkeUdvMG4xWmN3X2pXbTlaOUFCeWxwWkxTR20tSFVlTm9wUnV0TUxXVWh2SmJlOW03MDYzTHJMTkl6ZlFyb24wbGlLazE3Sno3N3dmS1BR?oc=5",
+   "score": 5,
+   "star": false,
+   "age_hours": 38.5,
+   "summary": "Zeydan Karalar responds to Özgür Özel's complaint, stating he is not ungrateful."
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "title": "The System Is ‘Stacked’ Against the Young",
+   "link": "https://www.nytimes.com/video/opinion/100000011291598/the-system-is-stacked-against-the-young.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 20.8,
+   "summary": "Saagar Enjeti argues the system is stacked against the young due to corporate power, urging Republicans to challenge the private sector."
+  }
+ ],
+ "repeats": [],
+ "finished": "2026-11-21T19:15:27.917936+00:00",
+ "seconds": 22.8
+}
