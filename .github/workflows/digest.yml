@@ -43,15 +43,30 @@ jobs:
       - name: Build digest
         run: python digest.py
         env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}      
+          
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: digest-diagnostics
+          path: diagnostics/
+          if-no-files-found: ignore
 
       - name: Save digest and state
         run: |
           git config user.name digest-bot
           git config user.email bot@users.noreply.github.com
           git add index.html state.json archive
-          git diff --staged --quiet || git commit -m "Update digest"
-          git push
+          if [ -d diagnostics ]; then git add diagnostics; fi
+          git diff --staged --quiet && exit 0
+          git commit -m "Update digest"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && exit 0
+            echo "Push failed (attempt $i); retrying in $((i*30))s"
+            sleep $((i*30))
+          done
+          exit 1
 
       - name: Stage site
         run: |
