@@ -1,0 +1,994 @@
+{
+ "started": "2026-11-24T20:50:40.249841+00:00",
+ "model": "google/gemini-2.5-flash-lite",
+ "status": "ok",
+ "error": null,
+ "notes": {
+  "candidates_after_dedupe": 444
+ },
+ "counters": {},
+ "events": [],
+ "feeds": [
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "returned": 20,
+   "in_window": 20,
+   "unseen": 20,
+   "sent": 15,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "returned": 20,
+   "in_window": 20,
+   "unseen": 20,
+   "sent": 10,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "AP",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 99,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "BBC",
+   "returned": 23,
+   "in_window": 16,
+   "unseen": 16,
+   "sent": 16,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "PBS NewsHour",
+   "returned": 20,
+   "in_window": 20,
+   "unseen": 20,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "NPR",
+   "returned": 10,
+   "in_window": 10,
+   "unseen": 10,
+   "sent": 10,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "ProPublica",
+   "returned": 20,
+   "in_window": 4,
+   "unseen": 4,
+   "sent": 4,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "returned": 56,
+   "in_window": 49,
+   "unseen": 47,
+   "sent": 15,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "Guardian",
+   "returned": 45,
+   "in_window": 43,
+   "unseen": 43,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "BBC",
+   "returned": 31,
+   "in_window": 31,
+   "unseen": 31,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "AP",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 99,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "Reuters",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "HDN",
+   "returned": 64,
+   "in_window": 22,
+   "unseen": 22,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "BBC Türkçe",
+   "returned": 16,
+   "in_window": 15,
+   "unseen": 15,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "Cumhuriyet",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "Sözcü",
+   "returned": 50,
+   "in_window": 50,
+   "unseen": 50,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "T24",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "Now TV",
+   "returned": 100,
+   "in_window": 76,
+   "unseen": 76,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "atlanta",
+   "source": "AJC",
+   "returned": 100,
+   "in_window": 98,
+   "unseen": 98,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "atlanta",
+   "source": "WSB-TV",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "atlanta",
+   "source": "GPB",
+   "returned": 100,
+   "in_window": 53,
+   "unseen": 52,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "returned": 50,
+   "in_window": 36,
+   "unseen": 36,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "NPR",
+   "returned": 12,
+   "in_window": 11,
+   "unseen": 11,
+   "sent": 11,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "BBC",
+   "returned": 100,
+   "in_window": 99,
+   "unseen": 99,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "T24",
+   "returned": 23,
+   "in_window": 23,
+   "unseen": 23,
+   "sent": 23,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "AJC",
+   "returned": 87,
+   "in_window": 84,
+   "unseen": 84,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "Sözcü",
+   "returned": 3,
+   "in_window": 3,
+   "unseen": 3,
+   "sent": 3,
+   "error": null
+  }
+ ],
+ "usage": {
+  "calls": 6,
+  "prompt_tokens": 41332,
+  "completion_tokens": 3324,
+  "cost": 0.0054628,
+  "by_label": {
+   "selection:us-politics": {
+    "calls": 1,
+    "prompt_tokens": 7616,
+    "completion_tokens": 681
+   },
+   "selection:global": {
+    "calls": 1,
+    "prompt_tokens": 8333,
+    "completion_tokens": 581
+   },
+   "selection:turkey": {
+    "calls": 1,
+    "prompt_tokens": 9180,
+    "completion_tokens": 564
+   },
+   "selection:atlanta": {
+    "calls": 1,
+    "prompt_tokens": 5173,
+    "completion_tokens": 641
+   },
+   "selection:opinion": {
+    "calls": 1,
+    "prompt_tokens": 5959,
+    "completion_tokens": 573
+   },
+   "cluster": {
+    "calls": 1,
+    "prompt_tokens": 5071,
+    "completion_tokens": 284
+   }
+  }
+ },
+ "selection": {
+  "us-politics": {
+   "candidates": 94,
+   "picks": 15,
+   "position_quintiles": [
+    7,
+    1,
+    2,
+    3,
+    2
+   ],
+   "by_source_candidates": {
+    "NYT": 19,
+    "AP": 25,
+    "BBC": 16,
+    "PBS NewsHour": 20,
+    "NPR": 10,
+    "ProPublica": 4
+   },
+   "by_source_picks": {
+    "NYT": 7,
+    "AP": 1,
+    "BBC": 2,
+    "PBS NewsHour": 3,
+    "NPR": 2
+   },
+   "zero_pick_sources": {
+    "ProPublica": [
+     "At a Doomed U.N. Conference, Saudi Arabia and Other Oil States Pushed Hard for an Unproven",
+     "Delayed Cancer Treatment. Missed Medication. How a Popular Insurance Plan’s Use of Prior A",
+     "Spotted on the D.C. Metro: Trump Staffer Accidentally Reveals Plan for Smithsonian Overhau"
+    ]
+   },
+   "score_min": 7,
+   "score_median": 8,
+   "score_max": 9
+  },
+  "global": {
+   "candidates": 95,
+   "picks": 15,
+   "position_quintiles": [
+    9,
+    0,
+    2,
+    2,
+    2
+   ],
+   "by_source_candidates": {
+    "NYT": 15,
+    "Guardian": 20,
+    "BBC": 20,
+    "AP": 15,
+    "Reuters": 25
+   },
+   "by_source_picks": {
+    "NYT": 7,
+    "Guardian": 2,
+    "BBC": 2,
+    "AP": 1,
+    "Reuters": 3
+   },
+   "zero_pick_sources": {},
+   "score_min": 7,
+   "score_median": 8,
+   "score_max": 9
+  },
+  "turkey": {
+   "candidates": 100,
+   "picks": 14,
+   "position_quintiles": [
+    8,
+    6,
+    0,
+    0,
+    0
+   ],
+   "by_source_candidates": {
+    "HDN": 20,
+    "BBC Türkçe": 12,
+    "Cumhuriyet": 12,
+    "Sözcü": 12,
+    "T24": 25,
+    "Now TV": 19
+   },
+   "by_source_picks": {
+    "HDN": 8,
+    "BBC Türkçe": 5,
+    "Cumhuriyet": 1
+   },
+   "zero_pick_sources": {
+    "Sözcü": [
+     "Ünlülere yeni uyuşturucu operasyonu! Özcan Deniz ve Deniz Çakır hakkında gözaltı kararı",
+     "İki bölgenin çiftçileri bir meyve yüzünden karşı karşıya geldi: Kimse geri adım atmıyor",
+     "ABD istihbaratına siber saldırı"
+    ],
+    "T24": [
+     "Galatasaray'a Aston Villa maçında üç şok birden: Deniz Gül'ün burnunda kırık iddiası!",
+     "Beyoğlu Kaymakamlığı, 25 Kasım’da ilçedeki tüm eylem ve yürüyüşleri yasakladı: Taksim, İst",
+     "CANLI | Galatasaray 0-0 Aston Villa"
+    ],
+    "Now TV": [
+     "Anne Yarısı Dizisi Ali ve Zeynep'i şoke eden haber!",
+     "Yeraltı Dizisi 23 Bölüm",
+     "Dizi, Film, Haber, TV"
+    ]
+   },
+   "score_min": 6,
+   "score_median": 7,
+   "score_max": 8
+  },
+  "atlanta": {
+   "candidates": 74,
+   "picks": 15,
+   "position_quintiles": [
+    4,
+    5,
+    2,
+    4,
+    0
+   ],
+   "by_source_candidates": {
+    "AJC": 25,
+    "WSB-TV": 25,
+    "GPB": 24
+   },
+   "by_source_picks": {
+    "AJC": 9,
+    "WSB-TV": 3,
+    "GPB": 3
+   },
+   "zero_pick_sources": {},
+   "score_min": 5,
+   "score_median": 6,
+   "score_max": 8
+  },
+  "opinion": {
+   "candidates": 81,
+   "picks": 14,
+   "position_quintiles": [
+    9,
+    1,
+    0,
+    2,
+    2
+   ],
+   "by_source_candidates": {
+    "NYT": 19,
+    "NPR": 10,
+    "BBC": 25,
+    "T24": 22,
+    "AJC": 2,
+    "Sözcü": 3
+   },
+   "by_source_picks": {
+    "NYT": 9,
+    "NPR": 1,
+    "T24": 4
+   },
+   "zero_pick_sources": {
+    "BBC": [
+     "China | Latest News & Updates",
+     "Artificial intelligence",
+     "Man Utd news: How can a decision be both right and wrong?"
+    ],
+    "AJC": [
+     "As sun sets on SEC football title game, volleyball rises in its place",
+     "Georgia school bus driver forced to resign over Charlie Kirk posts, lawsuit says"
+    ],
+    "Sözcü": [
+     "Arkadaşlıkları bitiren 6 masum söz",
+     "Gülten Dayıoğlu'ndan duygulandıran vasiyet: Görüntüleri oğluna emanet etti",
+     "O aslan bir oligarkın olabilir mi? - İpek Özbey"
+    ]
+   },
+   "score_min": 7,
+   "score_median": 7,
+   "score_max": 9
+  }
+ },
+ "sections": {
+  "us-politics": {
+   "quota": 6,
+   "published": 5,
+   "distinct_events": 5,
+   "taken_by_earlier_section": 0,
+   "stopped": "ran out of events"
+  },
+  "global": {
+   "quota": 6,
+   "published": 6,
+   "distinct_events": 7,
+   "taken_by_earlier_section": 1,
+   "stopped": "quota reached"
+  },
+  "turkey": {
+   "quota": 4,
+   "published": 4,
+   "distinct_events": 14,
+   "taken_by_earlier_section": 1,
+   "stopped": "quota reached"
+  },
+  "atlanta": {
+   "quota": 4,
+   "published": 4,
+   "distinct_events": 14,
+   "taken_by_earlier_section": 0,
+   "stopped": "quota reached"
+  },
+  "opinion": {
+   "quota": 5,
+   "published": 5,
+   "distinct_events": 10,
+   "taken_by_earlier_section": 0,
+   "stopped": "quota reached"
+  }
+ },
+ "clusters": {
+  "ai_clustering": "ok",
+  "candidates": 73,
+  "groups": 48,
+  "size_histogram": {
+   "1": 43,
+   "2": 2,
+   "3": 1,
+   "4": 1,
+   "19": 1
+  },
+  "auto_merged": [],
+  "weak_links": [
+   {
+    "cluster": "cluster-63",
+    "cluster_size": 4,
+    "similarity": 0.07,
+    "source": "NYT",
+    "section": "opinion",
+    "title": "Trump Seems Untouchable. But That’s Changing."
+   },
+   {
+    "cluster": "cluster-63",
+    "cluster_size": 4,
+    "similarity": 0.07,
+    "source": "NYT",
+    "section": "opinion",
+    "title": "Why the U.S. Can’t Afford to Let Nvidia Fail"
+   }
+  ],
+  "cross_section": [
+   {
+    "cluster": "cluster-3",
+    "sections": [
+     "global",
+     "us-politics"
+    ]
+   },
+   {
+    "cluster": "cluster-27",
+    "sections": [
+     "global",
+     "turkey"
+    ]
+   }
+  ],
+  "multi_member_clusters": [
+   {
+    "cluster": "cluster-0",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "us-politics",
+      "title": "Broderick Wins Tennessee House Race, Giving Democrats Largest Majority in 30 Years"
+     },
+     {
+      "source": "AP",
+      "section": "us-politics",
+      "title": "Democrats clinch a historic House majority of at least 259 seats, the largest since 1990"
+     },
+     {
+      "source": "NPR",
+      "section": "us-politics",
+      "title": "Democrats win House by largest margin in 50 years. And, COP31 ends with no deal"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-3",
+    "members": [
+     {
+      "source": "PBS NewsHour",
+      "section": "us-politics",
+      "title": "Huang's reinstatement at Nvidia sparks fury in Congress as lawmakers move forward with hearings"
+     },
+     {
+      "source": "NYT",
+      "section": "us-politics",
+      "title": "Trump Is Said to Have Pushed to Reinstate Nvidia CEO Jensen Huang"
+     },
+     {
+      "source": "BBC",
+      "section": "us-politics",
+      "title": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang"
+     },
+     {
+      "source": "NPR",
+      "section": "us-politics",
+      "title": "Trump takes credit for Jensen Huang returns to Nvidia, says its good for the economy"
+     },
+     {
+      "source": "NYT",
+      "section": "us-politics",
+      "title": "Trump’s Extraordinary Nvidia Intervention Sidelines National Security Concerns"
+     },
+     {
+      "source": "PBS NewsHour",
+      "section": "us-politics",
+      "title": "Why Trump believed he needed to get Jensen Huang back on top at Nvidia"
+     },
+     {
+      "source": "PBS NewsHour",
+      "section": "us-politics",
+      "title": "Why Trump pushed for Jensen Huang's return to Nvidia"
+     },
+     {
+      "source": "NYT",
+      "section": "us-politics",
+      "title": "Trump Administration Imposes Sanctions on Megaspeed, Singaporean Firm at Center of Nvidia Scandal"
+     },
+     {
+      "source": "BBC",
+      "section": "us-politics",
+      "title": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal"
+     },
+     {
+      "source": "Guardian",
+      "section": "global",
+      "title": "Schumer accuses Huang of violating US export control laws amid shipments of chips to China"
+     },
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "Trump’s Nvidia Push Shows Companies’ Importance in Global Economic War"
+     },
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "National Security vs. the Stock Market"
+     },
+     {
+      "source": "Guardian",
+      "section": "global",
+      "title": "Nvidia CEO Jensen Huang apologizes to staff: ‘I made some terrible mistakes’"
+     },
+     {
+      "source": "AP",
+      "section": "global",
+      "title": "Nvidia CEO Jensen Huang pulls off an unlikely comeback in just 11 days"
+     },
+     {
+      "source": "Reuters",
+      "section": "global",
+      "title": "Nvidia board's Huang reversal raises doubts about independence, critics say"
+     },
+     {
+      "source": "Reuters",
+      "section": "global",
+      "title": "Nvidia slips as investors assess risks surrounding Huang's return as CEO"
+     },
+     {
+      "source": "Reuters",
+      "section": "global",
+      "title": "Nvidia's Huang returns to cheers in China, but political hurdles mount"
+     },
+     {
+      "source": "BBC",
+      "section": "global",
+      "title": "US attorney general dodges questions about Nvidia investigation"
+     },
+     {
+      "source": "BBC",
+      "section": "global",
+      "title": "What Jensen Huang's return teaches China's Xi about Trump"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-27",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "Iraq’s Prime Minister Aims to Wrest More Power from Kurdistan Region"
+     },
+     {
+      "source": "HDN",
+      "section": "turkey",
+      "title": "Iraq PM orders federal control of Kurdish border crossings, oil fields"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-59",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "opinion",
+      "title": "The ‘Everywhere, All at Once’ Cybersecurity Crisis"
+     },
+     {
+      "source": "NYT",
+      "section": "opinion",
+      "title": "‘The Digital Deficit Has Come Due’"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-63",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "opinion",
+      "title": "Trump Seems Untouchable. But That’s Changing."
+     },
+     {
+      "source": "NYT",
+      "section": "opinion",
+      "title": "When You’re a Star They Let You Compromise National Security"
+     },
+     {
+      "source": "NYT",
+      "section": "opinion",
+      "title": "Why the U.S. Can’t Afford to Let Nvidia Fail"
+     },
+     {
+      "source": "NPR",
+      "section": "opinion",
+      "title": "Rep. Raja Krishnamoorthi, D-Ill., on Trump's involvement in the stock market"
+     }
+    ]
+   }
+  ],
+  "audit_pairs": [
+   {
+    "similarity": 0.21,
+    "a": "AJC: Guest Column - In America First era, Persian Gulf states beef up security",
+    "b": "AJC: Guest Column - Robert F. Kennedy Jr. is presiding over a public health disaster"
+   },
+   {
+    "similarity": 0.21,
+    "a": "AJC: Guest Column - Robert F. Kennedy Jr. is presiding over a public health disaster",
+    "b": "AJC: Guest Column: Hiring managers must avoid correlating visible with valuable"
+   }
+  ]
+ },
+ "repairs": {
+  "mixed_news_opinion": 1
+ },
+ "published": [
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "Broderick Wins Tennessee House Race, Giving Democrats Largest Majority in 30 Years",
+   "link": "https://www.nytimes.com/2026/11/24/us/politics/tennessee-house-election-results-broderick-wins.html",
+   "score": 9,
+   "star": true,
+   "age_hours": 1.4,
+   "summary": "Democrats expanded their House majority to its largest in 30 years after a tech worker ousted an incumbent Republican without TV ads."
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "Trump Is Said to Have Pushed to Reinstate Nvidia CEO Jensen Huang",
+   "link": "https://www.nytimes.com/2026/11/23/us/politics/trump-nvidia-huang.html",
+   "score": 8,
+   "star": false,
+   "age_hours": 21.2,
+   "summary": "President Trump reportedly pushed for Jensen Huang's reinstatement as Nvidia CEO, leading to weekend maneuvering by Vice President JD Vance."
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "No. 2 Official at F.B.I. Is Said to Be Retiring Before End of Year",
+   "link": "https://www.nytimes.com/2026/11/23/us/politics/fbi-raia-retiring.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 4.9,
+   "summary": "The No. 2 official at the F.B.I., Christopher G. Raia, is reportedly retiring before the end of the year."
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "Trump Ballroom and Other Projects Got $300 Million Donation Boost",
+   "link": "https://www.nytimes.com/2026/11/24/us/politics/account-park-service-trump-ballroom-donation.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 2.4,
+   "summary": "The Trump administration received a $300 million donation boost for presidential projects like the White House ballroom and a triumphal arch."
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "U.S. Spy Agencies Suffer Breach of Some Unclassified Information",
+   "link": "https://www.nytimes.com/2026/11/24/us/politics/spy-agencies-computer-network-breaches.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 0.1,
+   "summary": "US spy agencies, including the CIA and ODNI, suffered a breach of some unclassified information amid cybersecurity concerns."
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "title": "China Investigates Chen Jining, Shanghai’s Party Leader, as Xi’s Purges Expand",
+   "link": "https://www.nytimes.com/2026/11/24/world/asia/shanghai-party-leader-investigation-china-xi.html",
+   "score": 7,
+   "star": true,
+   "age_hours": 6.1,
+   "summary": "China investigates Shanghai Party Leader Chen Jining as President Xi Jinping's purges continue."
+  },
+  {
+   "section": "global",
+   "source": "GPB",
+   "title": "The human cost of the electric vehicle boom is at the center of a lawsuit in Congo",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRUFGWGwzU1Q0S2hESnphbkNERWdwOXNZaGJhZ0llcVlHUzNrc1JGRHFGcXJLbkRlMU9fbDFYVkx6ZVFPMERSZjVwUXpvcTRWN0lnSzYzc2RzSld1NTFpQXJhY25nWEVlYUEtanRJNFQ5WGh3S3VnUC0zUi1zNFpxUm5LenozYTRnYnpUNENWRnlxZXkxTHN4d25pT2gyQzQ4a0dwTDVLajJQSGhTOGpTQmtVcw?oc=5",
+   "score": 5,
+   "star": false,
+   "age_hours": 3.7,
+   "summary": "The human cost of the electric vehicle boom is the subject of a lawsuit in Congo."
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "title": "Houthi Attack on Skyscraper in Saudi Capital Wounds 11, Officials Say",
+   "link": "https://www.nytimes.com/2026/11/24/world/middleeast/saudi-skyscraper-houthi-strike.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 1.5,
+   "summary": "A Houthi attack on a skyscraper in Saudi Arabia's capital wounded 11 people amid escalating regional tensions."
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "title": "Iraq’s Prime Minister Aims to Wrest More Power from Kurdistan Region",
+   "link": "https://www.nytimes.com/2026/11/24/world/middleeast/iraq-prime-minister-kurdistan-control.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 0.6,
+   "summary": "Iraq's Prime Minister seeks to increase control over Kurdistan's border crossings and oil resources."
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "title": "Murder Charge Reinstated for French Police Officer in Teen’s Shooting",
+   "link": "https://www.nytimes.com/2026/11/24/world/europe/france-nahel-merzouk.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 6.6,
+   "summary": "A French police officer faces a reinstated murder charge in the shooting death of 17-year-old Nahel Merzouk."
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "title": "Norway Has Closed Its Last Coal Mine, Ending a Way of Life in the Arctic",
+   "link": "https://www.nytimes.com/2026/11/24/world/europe/norway-svalbard-arctic-last-coal-mine.html",
+   "score": 7,
+   "star": false,
+   "age_hours": 6.9,
+   "summary": "Norway closes its last coal mine in Svalbard, marking the end of an era and a shift towards tourism and geopolitics."
+  },
+  {
+   "section": "turkey",
+   "source": "HDN",
+   "title": "Development Road Project to bring $61.5 bln to Turkish economy over 10 years",
+   "link": "https://www.hurriyetdailynews.com/development-road-project-to-bring-61-5-bln-to-turkish-economy-over-10-years-229802",
+   "score": 8,
+   "star": true,
+   "age_hours": 9.9,
+   "summary": "Development Road Project linking Iraq and Türkiye to Europe expected to bring $61.5 billion to Turkish economy over 10 years."
+  },
+  {
+   "section": "turkey",
+   "source": "BBC Türkçe",
+   "title": "AKP Genel Başkan Yardımcısı Hayati Yazıcı görevlerinden istifa etti",
+   "link": "https://www.bbc.com/turkce/articles/c5vg2nxdkmdro?at_medium=RSS&at_campaign=rss",
+   "score": 7,
+   "star": false,
+   "age_hours": 2.7,
+   "summary": "AKP Deputy Chairman Hayati Yazıcı resigns from his post following allegations concerning his son."
+  },
+  {
+   "section": "turkey",
+   "source": "Cumhuriyet",
+   "title": "Galatasaray'dan Şampiyonlar Ligi'nde 25 yıl sonra bir ilk",
+   "link": "https://www.cumhuriyet.com.tr/spor/galatasaray-dan-sampiyonlar-ligi-nde-25-yil-sonra-bir-ilk-2559122",
+   "score": 6,
+   "star": false,
+   "age_hours": 0.1,
+   "summary": "Galatasaray achieves a rare feat, winning two consecutive Champions League matches without conceding since 2001."
+  },
+  {
+   "section": "turkey",
+   "source": "BBC Türkçe",
+   "title": "Bahçeli: 'Yolsuzluğa hiçbir şekilde müsamaha gösterme niyetinde değiliz'",
+   "link": "https://www.bbc.com/turkce/articles/cqgm3j0zjvgyo?at_medium=RSS&at_campaign=rss",
+   "score": 7,
+   "star": false,
+   "age_hours": 10.8,
+   "summary": "MHP Chair Bahçeli warns that a shrinking middle class threatens Türkiye's social fabric."
+  },
+  {
+   "section": "atlanta",
+   "source": "AJC",
+   "title": "Georgia Gwinnett College Republicans host white separatist, sparking protest",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdXNZdnA2ZlRGZGNPbWZiV2tjR203Y1diUG9ZcldaTGFqUVFjRFV1QlJrTTdTdmtjSmp1NlRRdzV4TXdIbC1WSS1XQzZaU1BrUlJDem9JajB6VC1WaEFKTUg3NXhRVjhmRFZjNjZ5aHY2MndMSkhsYXl6SlZpNWszZGpSVEY4UQ?oc=5",
+   "score": 8,
+   "star": true,
+   "age_hours": 3.0,
+   "summary": "Georgia Gwinnett College Republicans hosted a white separatist, which sparked a protest."
+  },
+  {
+   "section": "atlanta",
+   "source": "GPB",
+   "title": "Data centers flood Black communities without residents having a say",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNeEVpaEllaDE5YnNaQzZZamtsQlk4WG9Famc3ZVY2UTB5S0kxUFU4dTF3N1Y2Q1E1TWNUaHhBUFM2R2ZYMy1jZlZBeWR4cUZralVvRW5yek13d3dvNzlSZ2JzenptVG5GcXFJWW0wVXlLRHhtSXBTS0h0OTRXbENqbTBRb05Hc25GelhqQmxXeElyd3JlOFM5Q2hhSFp2S1c1NkVn?oc=5",
+   "score": 7,
+   "star": false,
+   "age_hours": 1.5,
+   "summary": "Data centers are being built in Black communities without residents having a say."
+  },
+  {
+   "section": "atlanta",
+   "source": "WSB-TV",
+   "title": "More than 40% of Georgians struggled to afford food in 2026, study says",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQLVRFUFd0eXBMeFBucW4zSm9OY3BIZVpGeFg0NERpU3Fpc0RMcmlJNlF0LXVNU05LV1M5NnJURlA0ZVJMTFdHYVVFbWtnNy1xbmNyaWV2WUJmWWZ4UEZtbUstQmEySTVKeUFMcXFDRl9ZWk96dDZFMnR3dk1JeWpDZlhjRDlGa2JFa3JCWWNSb1pBc1AxS3NfOU1GTzN2c3pTSWExTV9OTkVuaWVfekNEZWRwcWVXN0E1Vkx5YnRtVFZ2OThaRVBzV9IB3AFBVV95cUxNTmdNMGNrWjdoVndkNW9UeHBCSGhmcFRaeEpJZjdLSDFoUGxvRS10VEdHUHZKS0drYS1CX1JtZHlKeWNiNFhRSkFLcmdFWk1YQ1BQMUlnWmZUTUR5S3pYeWJYR2d4bTNpaWxsSmxDTVlrakZtSjVzV2NqZlpVek92RDdGenZQbFdTM1lvQk5nbWtkekYtOHJwVndiSDg1MG94dkZOTDBJVFFOYjBJXzFpZHplUXcxTDZGcURxaU5qQ1JMcEZTdUVqSThxeF9kejBJV1dodFE2SThKd0Zl?oc=5",
+   "score": 7,
+   "star": false,
+   "age_hours": 4.0,
+   "summary": "More than 40% of Georgians struggled to afford food in 2026, according to a study."
+  },
+  {
+   "section": "atlanta",
+   "source": "AJC",
+   "title": "This Georgia House runoff could widen Democrats’ new majority or boost GOP",
+   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1KeWIxLUI2X2twRkh3bmoyOUFwOE1QSGQyaWFLQlBhREVFSG8teDJ3ZDVpTGZvQ09sbzEwUk5CMmZrdjZTYkFwLTd4T2dhbFFmdk5zWG1ucU4yVF9rOC1yWURLYV9jbk02U2hHVWdUajFQa1NIVFBIemIzcw?oc=5",
+   "score": 8,
+   "star": false,
+   "age_hours": 10.9,
+   "summary": "A Georgia House runoff election could expand the Democrats' new majority or boost the GOP."
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "title": "The ‘Everywhere, All at Once’ Cybersecurity Crisis",
+   "link": "https://www.nytimes.com/2026/11/24/opinion/ezra-klein-podcast-nicole-perlroth.html",
+   "score": 9,
+   "star": true,
+   "age_hours": 10.8,
+   "summary": "Cybersecurity expert Nicole Perlroth explains why the digital world is in chaos due to widespread vulnerabilities."
+  },
+  {
+   "section": "opinion",
+   "source": "T24",
+   "title": "Aralarında Nobel ödüllü ekonomist Daron Acemoğlu da var; akademisyenler, 'Uluslararası Oligarşiye Karşı Paris Manifestosu'nu imzaladı: Milyarderler demokrasiler için tehdit!",
+   "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQNTRYUjdWR2NaSXNiR2pWUlZWV1V2RmZsbTg0a0dyQTZLZmh5UXNnaUUtcUxFX19tSjlvcTJaYTQ4VXFZTkVtRFVOZnJ6bUJ4YWpYV3NRMk1ITmctd1lVRzIxVnZ1d0xzR0N5eUt6bFRKQkMteGJTWmxHWEY5VTBZdTVyNnpXd1o0R1NzUkF3TXV5Ujc5cWZZSnlqTXhGTzRMNElfVjB3Tjl4eEthLWVCMUY3ZVVmUUZtQ0FQa3pQSkZoQmRfN1RzNDAyOUZEdmRTQnBNQ2hTWnpwQVB0ZkNfSFRKcGY2WmgtSkdEYk9JclBjXzI0NHc?oc=5",
+   "score": 8,
+   "star": false,
+   "age_hours": 57.5,
+   "summary": "Academics, including Nobel laureate Daron Acemoğlu, signed a manifesto declaring billionaires a threat to democracies."
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "title": "The National Popular Vote and the End of the Electoral College as We Know It",
+   "link": "https://www.nytimes.com/2026/11/23/opinion/national-popular-vote.html",
+   "score": 8,
+   "star": false,
+   "age_hours": 1.7,
+   "summary": "A presidential election decided by popular vote, not the Electoral College, is nearing reality."
+  },
+  {
+   "section": "opinion",
+   "source": "T24",
+   "title": "Anayasa Mahkemesi, T24'ün erişim engelinin durdurulmasına yönelik 'tedbir' talebini reddetti; dosya esastan görüşülecek!",
+   "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOMTJ0V0cySlFROHV2bV9XOU1nc09JbnNsN2NrRkJ3ZEFldWdkUl9vbklWS0tvZ0taWnpja21JSUZZcVhpTHJFMWFUTUFVSGdQVjlKQmhNc1NQS3VPcEpWVzNCNDVTQk1xRkZkQ0tmQm1zeGdZMXB5ckdPWm1FXzNZYkdOTHJmRjhFWThBVXJYQjQwQVlhcTN6amRrWGVIVzgwRHd3QVFqd1R2d3ZhVXhxTk81NHdGN3RQRHhSVUppRDhaam9EX3oyZGlHeDF0N2JfZHdVazlzeFNsWkxwMUwyQg?oc=5",
+   "score": 7,
+   "star": false,
+   "age_hours": 36.1,
+   "summary": "The Constitutional Court rejected T24's request to halt an access ban, with the case to be heard on its merits."
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "title": "Trump Seems Untouchable. But That’s Changing.",
+   "link": "https://www.nytimes.com/video/opinion/100000011295020/trump-seems-untouchable-but-thats-changing.html",
+   "score": 8,
+   "star": false,
+   "age_hours": 6.9,
+   "summary": "Rep. Robert Garcia argues Trump and associates feel untouchable, but public apathy is starting to change."
+  }
+ ],
+ "repeats": [],
+ "finished": "2026-11-24T20:51:04.344214+00:00",
+ "seconds": 24.1
+}
