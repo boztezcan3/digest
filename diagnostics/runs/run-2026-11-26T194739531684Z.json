@@ -1,0 +1,951 @@
+{
+ "started": "2026-11-26T19:47:39.531684+00:00",
+ "model": "google/gemini-2.5-flash-lite",
+ "status": "ok",
+ "error": null,
+ "notes": {
+  "candidates_after_dedupe": 458
+ },
+ "counters": {},
+ "events": [],
+ "feeds": [
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "returned": 20,
+   "in_window": 20,
+   "unseen": 20,
+   "sent": 15,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "returned": 20,
+   "in_window": 20,
+   "unseen": 20,
+   "sent": 10,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "AP",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "BBC",
+   "returned": 22,
+   "in_window": 22,
+   "unseen": 22,
+   "sent": 22,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "PBS NewsHour",
+   "returned": 20,
+   "in_window": 20,
+   "unseen": 20,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "NPR",
+   "returned": 10,
+   "in_window": 10,
+   "unseen": 10,
+   "sent": 10,
+   "error": null
+  },
+  {
+   "section": "us-politics",
+   "source": "ProPublica",
+   "returned": 20,
+   "in_window": 7,
+   "unseen": 7,
+   "sent": 7,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "returned": 60,
+   "in_window": 60,
+   "unseen": 55,
+   "sent": 15,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "Guardian",
+   "returned": 45,
+   "in_window": 45,
+   "unseen": 45,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "BBC",
+   "returned": 27,
+   "in_window": 27,
+   "unseen": 27,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "AP",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "global",
+   "source": "Reuters",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "HDN",
+   "returned": 64,
+   "in_window": 22,
+   "unseen": 22,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "BBC Türkçe",
+   "returned": 16,
+   "in_window": 14,
+   "unseen": 14,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "Cumhuriyet",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "Sözcü",
+   "returned": 50,
+   "in_window": 50,
+   "unseen": 50,
+   "sent": 12,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "T24",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 100,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "turkey",
+   "source": "Now TV",
+   "returned": 100,
+   "in_window": 69,
+   "unseen": 69,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "atlanta",
+   "source": "AJC",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 99,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "atlanta",
+   "source": "WSB-TV",
+   "returned": 100,
+   "in_window": 99,
+   "unseen": 98,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "atlanta",
+   "source": "GPB",
+   "returned": 100,
+   "in_window": 59,
+   "unseen": 57,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "returned": 50,
+   "in_window": 44,
+   "unseen": 42,
+   "sent": 20,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "NPR",
+   "returned": 22,
+   "in_window": 21,
+   "unseen": 21,
+   "sent": 21,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "BBC",
+   "returned": 100,
+   "in_window": 100,
+   "unseen": 99,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "T24",
+   "returned": 14,
+   "in_window": 13,
+   "unseen": 13,
+   "sent": 13,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "AJC",
+   "returned": 84,
+   "in_window": 84,
+   "unseen": 83,
+   "sent": 25,
+   "error": null
+  },
+  {
+   "section": "opinion",
+   "source": "Sözcü",
+   "returned": 3,
+   "in_window": 3,
+   "unseen": 3,
+   "sent": 3,
+   "error": null
+  }
+ ],
+ "usage": {
+  "calls": 6,
+  "prompt_tokens": 41394,
+  "completion_tokens": 3320,
+  "cost": 0.005467400000000001,
+  "by_label": {
+   "selection:us-politics": {
+    "calls": 1,
+    "prompt_tokens": 8441,
+    "completion_tokens": 651
+   },
+   "selection:global": {
+    "calls": 1,
+    "prompt_tokens": 8032,
+    "completion_tokens": 653
+   },
+   "selection:turkey": {
+    "calls": 1,
+    "prompt_tokens": 9322,
+    "completion_tokens": 546
+   },
+   "selection:atlanta": {
+    "calls": 1,
+    "prompt_tokens": 5196,
+    "completion_tokens": 631
+   },
+   "selection:opinion": {
+    "calls": 1,
+    "prompt_tokens": 5550,
+    "completion_tokens": 551
+   },
+   "cluster": {
+    "calls": 1,
+    "prompt_tokens": 4853,
+    "completion_tokens": 288
+   }
+  }
+ },
+ "selection": {
+  "us-politics": {
+   "candidates": 105,
+   "picks": 15,
+   "position_quintiles": [
+    8,
+    0,
+    0,
+    1,
+    6
+   ],
+   "by_source_candidates": {
+    "NYT": 21,
+    "AP": 25,
+    "BBC": 22,
+    "PBS NewsHour": 20,
+    "NPR": 10,
+    "ProPublica": 7
+   },
+   "by_source_picks": {
+    "NYT": 8,
+    "PBS NewsHour": 1,
+    "NPR": 3,
+    "ProPublica": 3
+   },
+   "zero_pick_sources": {
+    "AP": [
+     "2 baby meerkats make their debut at a Peruvian zoo, spotlighting conservation",
+     "Heavy rain, wind and flooding plague much of US on Thanksgiving holiday",
+     "Schizophrenic man found guilty of attempted murders of 14 people, including 10 on London-b"
+    ],
+    "BBC": [
+     "Fireball steals the show during Thanksgiving drone display in Indiana",
+     "Pregnant US inmate escapes in prison vehicle after medical appointment",
+     "US Army says controlled blast of explosives in Iowa was 'huge success'"
+    ]
+   },
+   "score_min": 6,
+   "score_median": 7,
+   "score_max": 8
+  },
+  "global": {
+   "candidates": 93,
+   "picks": 15,
+   "position_quintiles": [
+    4,
+    4,
+    4,
+    2,
+    1
+   ],
+   "by_source_candidates": {
+    "NYT": 15,
+    "Guardian": 20,
+    "BBC": 17,
+    "AP": 16,
+    "Reuters": 25
+   },
+   "by_source_picks": {
+    "NYT": 4,
+    "Guardian": 2,
+    "BBC": 6,
+    "AP": 1,
+    "Reuters": 2
+   },
+   "zero_pick_sources": {},
+   "score_min": 7,
+   "score_median": 8,
+   "score_max": 9
+  },
+  "turkey": {
+   "candidates": 103,
+   "picks": 14,
+   "position_quintiles": [
+    12,
+    2,
+    0,
+    0,
+    0
+   ],
+   "by_source_candidates": {
+    "HDN": 20,
+    "BBC Türkçe": 12,
+    "Cumhuriyet": 12,
+    "Sözcü": 12,
+    "T24": 25,
+    "Now TV": 22
+   },
+   "by_source_picks": {
+    "HDN": 12,
+    "BBC Türkçe": 1,
+    "Cumhuriyet": 1
+   },
+   "zero_pick_sources": {
+    "Sözcü": [
+     "Güneş nereye giderse o yöne dönecek ev inşa edecekler",
+     "Denizli’de feci kaza: Devrilen TIR’ın 29 yaşındaki sürücüsü kurtarılamadı",
+     "Nehirleri istila eden bitkiyi iş makineleriyle bile temizleyemiyorlar"
+    ],
+    "T24": [
+     "#taksim yeşilyurt",
+     "CANLI | Anayasa Mahkemesi, Ekrem İmamoğlu’nun tutukluluğuna yaptığı itirazı reddetti!",
+     "Ayrılık sonrası yükselen trend: Boşanma yüzüğü nedir?"
+    ],
+    "Now TV": [
+     "Yeraltı Dizisi 24 Bölüm",
+     "Anne Yarısı Dizisi 9 Bölüm",
+     "Ömür Usta Dizisi 9 Bölüm"
+    ]
+   },
+   "score_min": 5,
+   "score_median": 7.0,
+   "score_max": 8
+  },
+  "atlanta": {
+   "candidates": 75,
+   "picks": 15,
+   "position_quintiles": [
+    4,
+    2,
+    2,
+    3,
+    4
+   ],
+   "by_source_candidates": {
+    "AJC": 25,
+    "WSB-TV": 25,
+    "GPB": 25
+   },
+   "by_source_picks": {
+    "AJC": 5,
+    "WSB-TV": 5,
+    "GPB": 5
+   },
+   "zero_pick_sources": {},
+   "score_min": 5,
+   "score_median": 6,
+   "score_max": 8
+  },
+  "opinion": {
+   "candidates": 82,
+   "picks": 15,
+   "position_quintiles": [
+    11,
+    1,
+    1,
+    0,
+    2
+   ],
+   "by_source_candidates": {
+    "NYT": 20,
+    "NPR": 20,
+    "BBC": 25,
+    "T24": 13,
+    "AJC": 2,
+    "Sözcü": 2
+   },
+   "by_source_picks": {
+    "NYT": 11,
+    "NPR": 1,
+    "BBC": 1,
+    "T24": 2
+   },
+   "zero_pick_sources": {
+    "AJC": [
+     "AJC goes behind the scenes of Hulu’s ‘The Circle’ in Midtown Atlanta",
+     "How to watch Georgia vs. Georgia Tech football, TV channel, streaming info"
+    ],
+    "Sözcü": [
+     "Çalışma hayatında devrim niteliğinde dönüşüm: Diploma dönemi bitiyor",
+     "Arkadaşlıkları bitiren 6 masum söz"
+    ]
+   },
+   "score_min": 5,
+   "score_median": 7,
+   "score_max": 8
+  }
+ },
+ "sections": {
+  "us-politics": {
+   "quota": 6,
+   "published": 6,
+   "distinct_events": 13,
+   "taken_by_earlier_section": 0,
+   "stopped": "quota reached"
+  },
+  "global": {
+   "quota": 6,
+   "published": 6,
+   "distinct_events": 8,
+   "taken_by_earlier_section": 0,
+   "stopped": "quota reached"
+  },
+  "turkey": {
+   "quota": 4,
+   "published": 2,
+   "distinct_events": 11,
+   "taken_by_earlier_section": 0,
+   "stopped": "ran out of events"
+  },
+  "atlanta": {
+   "quota": 4,
+   "published": 4,
+   "distinct_events": 11,
+   "taken_by_earlier_section": 0,
+   "stopped": "quota reached"
+  },
+  "opinion": {
+   "quota": 5,
+   "published": 5,
+   "distinct_events": 15,
+   "taken_by_earlier_section": 0,
+   "stopped": "quota reached"
+  }
+ },
+ "clusters": {
+  "ai_clustering": "ok",
+  "candidates": 74,
+  "groups": 58,
+  "size_histogram": {
+   "1": 47,
+   "2": 6,
+   "3": 5
+  },
+  "auto_merged": [],
+  "weak_links": [],
+  "cross_section": [],
+  "multi_member_clusters": [
+   {
+    "cluster": "cluster-8",
+    "members": [
+     {
+      "source": "NPR",
+      "section": "us-politics",
+      "title": "Sen. Tim Kaine, D-Va., shares why he opposes Trump's proposed tariffs"
+     },
+     {
+      "source": "NPR",
+      "section": "us-politics",
+      "title": "Trump administration proposes new tariffs on goods from major U.S. trading partners"
+     },
+     {
+      "source": "PBS NewsHour",
+      "section": "us-politics",
+      "title": "Trump administration to raise tariffs on China, EU, Brazil and others"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-15",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "Two Italians Killed in Iranian Drone Attack on Kuwait, Officials Say"
+     },
+     {
+      "source": "Reuters",
+      "section": "global",
+      "title": "Two Italians killed in attack on Kuwait site, Iran denies involvement"
+     },
+     {
+      "source": "BBC",
+      "section": "global",
+      "title": "Two Italians killed in strike in Kuwait, as Iran denies responsibility"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-18",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "13 Dead and 13 Thought Trapped in Indonesian Mine After Heavy Rain"
+     },
+     {
+      "source": "BBC",
+      "section": "global",
+      "title": "Thirteen dead as mine disaster highlights illegal hunt for gold"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-19",
+    "members": [
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "Brazilian Duped Into Fighting for Russia: ‘War Is Hell’"
+     },
+     {
+      "source": "NYT",
+      "section": "global",
+      "title": "Lured by High Salaries, Some Brazilians Were Duped Into Fighting for Russia"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-20",
+    "members": [
+     {
+      "source": "BBC",
+      "section": "global",
+      "title": "Deadly fire erupts near Cairo killing dozens of people"
+     },
+     {
+      "source": "BBC",
+      "section": "global",
+      "title": "Egyptian authorities arrest motorist over tanker crash that killed 31"
+     },
+     {
+      "source": "AP",
+      "section": "global",
+      "title": "Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-27",
+    "members": [
+     {
+      "source": "BBC",
+      "section": "global",
+      "title": "Hamas political official and wife among eight Palestinians killed in Israeli strikes on Gaza"
+     },
+     {
+      "source": "Reuters",
+      "section": "global",
+      "title": "Hamas weighs response after Israel kills 10 people in Gaza"
+     },
+     {
+      "source": "Guardian",
+      "section": "global",
+      "title": "Israeli strikes kill 16 schoolchildren so far this month, Gaza ministry says"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-31",
+    "members": [
+     {
+      "source": "BBC Türkçe",
+      "section": "turkey",
+      "title": "Anayasa Mahkemesi'nden İmamoğlu'nun tutukluluk itirazına ret"
+     },
+     {
+      "source": "HDN",
+      "section": "turkey",
+      "title": "Turkish top court rejects İmamoğlu’s appeal against arrest"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-34",
+    "members": [
+     {
+      "source": "HDN",
+      "section": "turkey",
+      "title": "$330 million plant to cut Türkiye’s chemical imports"
+     },
+     {
+      "source": "Cumhuriyet",
+      "section": "turkey",
+      "title": "Rusya’dan Türkiye’ye 330 milyon dolarlık petrokimya yatırımı: Başbakan Yardımcısı, tesisin açılışına"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-44",
+    "members": [
+     {
+      "source": "WSB-TV",
+      "section": "atlanta",
+      "title": "Fulton County wins emergency stay in fight over unredacted 2020 election records"
+     },
+     {
+      "source": "GPB",
+      "section": "atlanta",
+      "title": "Judge halts order for Georgia's Fulton County to give 2020 election records to State Election Board"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-50",
+    "members": [
+     {
+      "source": "WSB-TV",
+      "section": "atlanta",
+      "title": "Georgia governor-elect Keisha Lance Bottoms announces inauguration plans"
+     },
+     {
+      "source": "AJC",
+      "section": "atlanta",
+      "title": "How Brian Kemp and Keisha Lance Bottoms can unite behind Georgia veterans"
+     },
+     {
+      "source": "GPB",
+      "section": "atlanta",
+      "title": "Inauguration ceremony for Gov.-elect Bottoms set for Jan. 12 in Atlanta's State Farm Arena"
+     }
+    ]
+   },
+   {
+    "cluster": "cluster-57",
+    "members": [
+     {
+      "source": "GPB",
+      "section": "atlanta",
+      "title": "Storms disrupt Thanksgiving travel. And, FCC violated ABC's free speech, judge says"
+     },
+     {
+      "source": "GPB",
+      "section": "atlanta",
+      "title": "U.S. Judge rules FCC violated ABC's free speech rights to please Trump"
+     }
+    ]
+   }
+  ],
+  "audit_pairs": []
+ },
+ "repairs": {},
+ "published": [
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "Bipartisan Desire to Regulate A.I. Faces Obstacles in Congress",
+   "link": "https://www.nytimes.com/2026/11/26/us/politics/ai-regulation-congress-nvidia.html",
+   "score": 8,
+   "star": true,
+   "age_hours": 9.7,
+   "summary": "Bipartisan desire to regulate AI faces legislative obstacles and turf battles in Congress."
+  },
+  {
+   "section": "us-politics",
+   "source": "ProPublica",
+   "title": "An Alarming Spike in Ectopic Pregnancy Deaths Was Hiding in Plain Sight in a Federal Dataset",
+   "link": "https://www.propublica.org/article/ectopic-pregnancy-data-analysis",
+   "score": 7,
+   "star": false,
+   "age_hours": 33.8,
+   "summary": "Alarming spike in ectopic pregnancy deaths was hiding in plain sight in a federal dataset."
+  },
+  {
+   "section": "us-politics",
+   "source": "NPR",
+   "title": "Sen. Tim Kaine, D-Va., shares why he opposes Trump's proposed tariffs",
+   "link": "https://www.npr.org/2026/11/26/nx-s1-6053944/sen-tim-kaine-d-va-shares-why-he-opposes-trumps-proposed-tariffs",
+   "score": 7,
+   "star": false,
+   "age_hours": 8.1,
+   "summary": "Senator Tim Kaine opposes Trump's proposed tariffs, citing concerns about trade impacts."
+  },
+  {
+   "section": "us-politics",
+   "source": "NYT",
+   "title": "C.I.A. Waterboarded More Detainees Than It Admitted, F.B.I. Interview Suggests",
+   "link": "https://www.nytimes.com/2026/11/25/us/politics/cia-waterboarding.html",
+   "score": 8,
+   "star": false,
+   "age_hours": 25.8,
+   "summary": "FBI interview suggests CIA waterboarded more detainees than admitted, with officials fearing prosecution."
+  },
+  {
+   "section": "us-politics",
+   "source": "ProPublica",
+   "title": "Delayed Cancer Treatment. Missed Medication. How a Popular Insurance Plan’s Use of Prior Authorization Hurt Patients.",
+   "link": "https://www.propublica.org/article/ambetter-prior-authorization-denials",
+   "score": 7,
+   "star": false,
+   "age_hours": 57.8,
+   "summary": "Delayed cancer treatment and missed medication highlight issues with insurance prior authorization."
+  },
+  {
+   "section": "us-politics",
+   "source": "NPR",
+   "title": "The U.S. government is investigating Iranian ties to as many as 50 hacked commercial vessels",
+   "link": "https://www.npr.org/2026/11/24/nx-s1-6052994/hack-commercial-vessels-iran",
+   "score": 7,
+   "star": false,
+   "age_hours": 46.7,
+   "summary": "US government investigating Iranian ties to as many as 50 hacked commercial vessels."
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "title": "Two Italians Killed in Iranian Drone Attack on Kuwait, Officials Say",
+   "link": "https://www.nytimes.com/2026/11/26/world/middleeast/italians-killed-iran-drone-attack-kuwait.html",
+   "score": 9,
+   "star": true,
+   "age_hours": 0.2,
+   "summary": "Two Italians were killed in a drone attack in Kuwait, with Iran denying responsibility for the strike."
+  },
+  {
+   "section": "global",
+   "source": "BBC",
+   "title": "Deadly fire erupts near Cairo killing dozens of people",
+   "link": "https://www.bbc.co.uk/news/videos/c52e8ndplvemo?at_medium=RSS&at_campaign=rss",
+   "score": 8,
+   "star": false,
+   "age_hours": 10.6,
+   "summary": "Deadly fire erupts near Cairo killing dozens of people after a fuel tanker overturned."
+  },
+  {
+   "section": "global",
+   "source": "Guardian",
+   "title": "What would happen if Russia detonated a nuclear weapon in space?",
+   "link": "https://www.theguardian.com/world/2026/nov/26/what-would-be-the-fallout-from-a-nuclear-armed-satellite-detonated-into-space",
+   "score": 8,
+   "star": false,
+   "age_hours": 1.6,
+   "summary": "Russia is reportedly preparing to launch a nuclear-armed satellite into space, posing a threat to global communications."
+  },
+  {
+   "section": "global",
+   "source": "HDN",
+   "title": "Netanyahu’s grip on Israeli parliament weakens",
+   "link": "https://www.hurriyetdailynews.com/netanyahus-grip-on-israeli-parliament-weakens-229878",
+   "score": 5,
+   "star": false,
+   "age_hours": 7.5,
+   "summary": "Netanyahu's grip on Israeli parliament weakens as legislation targeting him advances, challenging his political standing."
+  },
+  {
+   "section": "global",
+   "source": "NYT",
+   "title": "13 Dead and 13 Thought Trapped in Indonesian Mine After Heavy Rain",
+   "link": "https://www.nytimes.com/2026/11/25/world/asia/indonesia-miners-trapped.html",
+   "score": 8,
+   "star": false,
+   "age_hours": 4.9,
+   "summary": "Thirteen dead and 13 thought trapped in Indonesian mine after heavy rain."
+  },
+  {
+   "section": "global",
+   "source": "BBC",
+   "title": "Nine injured, three critically, after Bangkok oil refinery explosion",
+   "link": "https://www.bbc.co.uk/news/articles/crx209kwk4kzo?at_medium=RSS&at_campaign=rss",
+   "score": 8,
+   "star": false,
+   "age_hours": 3.4,
+   "summary": "Nine people were injured, three critically, after an oil refinery explosion in Bangkok, causing a large plume of smoke."
+  },
+  {
+   "section": "turkey",
+   "source": "BBC Türkçe",
+   "title": "Anayasa Mahkemesi'nden İmamoğlu'nun tutukluluk itirazına ret",
+   "link": "https://www.bbc.com/turkce/articles/ckedqgw8xp2jo?at_medium=RSS&at_campaign=rss",
+   "score": 8,
+   "star": true,
+   "age_hours": 7.5,
+   "summary": "The Constitutional Court rejected Istanbul Mayor Ekrem İmamoğlu's appeal, ruling his rights were not violated."
+  },
+  {
+   "section": "turkey",
+   "source": "Cumhuriyet",
+   "title": "Rusya’dan Türkiye’ye 330 milyon dolarlık petrokimya yatırımı: Başbakan Yardımcısı, tesisin açılışına katıldı",
+   "link": "https://www.cumhuriyet.com.tr/siyaset/rusya-dan-turkiye-ye-330-milyon-dolarlik-petrokimya-yatirimi-basbakan-yardimcisi-tesisin-acilisina-katildi-2559725",
+   "score": 7,
+   "star": false,
+   "age_hours": 0.7,
+   "summary": "Russian Deputy Prime Minister attended the opening of a $330 million petrochemical plant in Kocaeli, Türkiye."
+  },
+  {
+   "section": "atlanta",
+   "source": "WSB-TV",
+   "title": "Fulton County wins emergency stay in fight over unredacted 2020 election records",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQMkJHMERsZ3Y4SWFMTnRkRDdROXdZa3V1LThJZFRwSGp6TDJzejBhQVlXMHFHTkNSZ0E0Rm9BZnhJSHBGNmRFTm1ZcFI1ZU9CSUFrSURGU3kwc25QMWZCUW1xY3dmZDFvaXdjZ2F2bXVUekVCMWFVSnRyNGxtMzhXRnF5ZENNazJjWVBRZmFDaUVRamU3ZVNhX1VQOGxsNTFJMHJLcHVEZnhxSmY1U1RRSTE3bG12ajc4WWlieUJ5TVZ2bFF5Nzd3S1c5YkRHX0ZjZklPYWZycU8yeDVmZGNR0gHzAUFVX3lxTE5DQjN5WERvRGJKUHJmTllqQ01Ud2FLeVBmRUJJU2hDY1RHWlpnczgyeXlkLUx4RXRMZDkwMXktLWJmX3lBdTRIdUFiamgzSFQzZzRjekVNa215RXpzSG9Pb0JVUWQ0MzBPcTYxVm9iU1dxRUJkeWNRTlVLWTZTOGR3UmhWMXpIcHhhTFJTMWs1WnVMR1lxMVBHX3lVajhNd3lMMkFqMEU3NWFTdjAwSEhwWndIUlBVLXRuRVZCdVR5LVVyTDQwTWd3U1dvUzI5OVZ0T1lNU3lQTk0xUm5CYlBrbk8xVjU3YU8zeFV3RkpJaFhKSQ?oc=5",
+   "score": 8,
+   "star": true,
+   "age_hours": 24.0,
+   "summary": "Fulton County wins emergency stay in fight over unredacted 2020 election records."
+  },
+  {
+   "section": "atlanta",
+   "source": "GPB",
+   "title": "Georgia leads nation in permanent loss of forest land",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdDVLbTUtWVZGWHhEbUZKWUpKU0xaalE4dDBSZXRFT3Yzb1NhMmVoQWVlQkVIWmd1ZHFUdEZpZi1yWDRJaDVENDh1ZS1yalhoYk4yN3pQbnA5M05ReUlJSTRBSU9VZUNUNGJLN1IyN1hvRzcxa2VjbmdjMVhqYmMtb1htcURQRVhRN3B4cmhfbDJaUk0?oc=5",
+   "score": 7,
+   "star": false,
+   "age_hours": 6.6,
+   "summary": "Georgia leads nation in permanent loss of forest land."
+  },
+  {
+   "section": "atlanta",
+   "source": "AJC",
+   "title": "Atlanta adds 20,500 jobs, but unemployment edges higher",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1pRklqeUNtUXk1b0xVYVc2eHBWNVktNllZdXFPU0FYVnE1dzRUOWpVbTRSbDVLaThiblZVY0ZXdmEyT1JPNVpJX1hJSWIyZUJ3YTFrLUdOUTE5R0UzendfX3NjZ3k0UC1oRU8wMnhsWTZ3bFk?oc=5",
+   "score": 6,
+   "star": false,
+   "age_hours": 1.3,
+   "summary": "Atlanta adds 20,500 jobs, but unemployment edges higher."
+  },
+  {
+   "section": "atlanta",
+   "source": "WSB-TV",
+   "title": "Georgia city targeted in cyberattack day before Thanksgiving",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNR0paMkVNN1pOZnNTWnF2Yl95ZnRBYndrMmpvcm1kWU9NekY2b1Bld3JxWHo2U2RuU2tSY21ick95SVVLaFBCa2pJNHVXOV9mTGdSNDlqeGk4dXFYTzZlMGxSWDFqRV9TZ0tlN3ZRSkZ5LUtRalAtSVdQWWVmR3gxUnlvUHNRSmhWOElmUHhjbXdlV3ItblA1Tklwc0hnd3ZJTkZPXy1LZWtlVWNDQ0VnNG5iOFM1b2kxbmfSAc4BQVVfeXFMT0g2bGRjVk85czhNNy1KVVlqbzV4UzEtLVBTbWc0N1FqWXhka3JsUmR4cmxUTnN1aU00a1NXLWYwd1gtY01lTmJWS3NTVXJUdVpDQzV4eEVFLW9SVmozQWwtSXNjRWVrQ3BXLUluRnJlTlBBVGFLZlE4Vl9Gd3Y2SDlVVXc0aDFkbWNqTFBiTUZWNTJ6b0s3WmR6MHBsNkkzMXFWMHFqQWx3UXJhbFFybXF3N2piWmdaZnUxVjZYdjZxLWktUXFwVVluMk9ORkE?oc=5",
+   "score": 7,
+   "star": false,
+   "age_hours": 2.0,
+   "summary": "Georgia city targeted in cyberattack day before Thanksgiving."
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "title": "Don’t Sign Up for Debt This Black Friday",
+   "link": "https://www.nytimes.com/video/opinion/100000011187585/dont-sign-up-for-debt-this-black-friday.html",
+   "score": 8,
+   "star": true,
+   "age_hours": 7.6,
+   "summary": "An opinion fellow argues that 'buy now, pay later' plans are essentially loans that take advantage of consumers."
+  },
+  {
+   "section": "opinion",
+   "source": "T24",
+   "title": "Hakan Okçal | COP31 Antalya İklim Zirvesi anlaşma sağlanamadan kapandı: Suçlu fosil yakıt lobisi",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd2pDbXIzaFpDa1d5b2JMdmVmanFnVENSZlpHdnR2cGQxQWdtZUliRjJaaWxMQVJ6S3ZMZHhBZjJsaGtnWThmNXpNRFY5RWxoNVRfTXhKaUI1dFRCakRaVkE3MlU1ZkEzVmJjcEVOWmtoWENfZlNfc2lBNmNxRzloSXdhODRuemtHcFhabDluMl9YUWtYS0t4RkRHOV9vbXBZV2tqZXpqRFBPbng1NmxMZm1XczdWR3JGc0IxNERjdHVkOEV5ZkE?oc=5",
+   "score": 6,
+   "star": false,
+   "age_hours": 70.8,
+   "summary": "The COP31 Climate Summit in Antalya concluded without an agreement, with the fossil fuel lobby blamed."
+  },
+  {
+   "section": "opinion",
+   "source": "NPR",
+   "title": "Iowans are worried about toxic fallout from a planned detonation. A look at the risks",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPN0NYWGkxU0RwLVVlbFNtZGhIcUJ6YklZNHF1LWJpc1hDOUhudU5ua2ZBcTlFcndSalJZVEo4TjR5NkdfQndrNUo4RDhhN0U1azA3UEltakxyMy1rVFRuV3ZDdHRjcDZxZXNDcFJQMkE0dWpPc0tLXzJZZG1fZmdlN1BIVzNQWUE1bWNqOXJ2b3BNYTZ1amxmamU2MXppa2tjWDhaVjdvdjZMY1RaaVRDTGRFZjM?oc=5",
+   "score": 6,
+   "star": false,
+   "age_hours": 34.1,
+   "summary": "Iowans express concern over potential toxic fallout from a planned detonation, with risks being examined."
+  },
+  {
+   "section": "opinion",
+   "source": "BBC",
+   "title": "Second court defeat for Trump's deep-sea mining ambitions",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9MTC1NTjNGN1dCcDNaTER1Q0s4RmN5Ym9lOFViSHU2aUJQbDhRVGZEcU5iR3hubFJrU0xaUXg2cEZRb08xWElOODR1aXpFcUFOZnhIY2JCRVd5b3M?oc=5",
+   "score": 6,
+   "star": false,
+   "age_hours": 1.4,
+   "summary": "Donald Trump's deep-sea mining plans have suffered a second court defeat."
+  },
+  {
+   "section": "opinion",
+   "source": "NYT",
+   "title": "These Batteries Are Big. And They’re Revolutionizing America’s Power Supply.",
+   "link": "https://www.nytimes.com/2026/11/26/opinion/electricity-batteries-commodity-economy.html",
+   "score": 8,
+   "star": false,
+   "age_hours": 2.4,
+   "summary": "Opinion: Large batteries are revolutionizing America's power supply, enabling electricity hoarding for economic use."
+  }
+ ],
+ "repeats": [],
+ "finished": "2026-11-26T19:48:00.043428+00:00",
+ "seconds": 20.5
+}

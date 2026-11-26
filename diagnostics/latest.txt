@@ -1,170 +1,165 @@
-DIGEST RUN 2026-11-24T20:50:40.249841+00:00  status=ok  model=google/gemini-2.5-flash-lite  24.1s
-note: candidates_after_dedupe = 444
+DIGEST RUN 2026-11-26T19:47:39.531684+00:00  status=ok  model=google/gemini-2.5-flash-lite  20.5s
+note: candidates_after_dedupe = 458
 
-USAGE: 6 calls, 41,332 tokens in, 3,324 out, cost $0.0055
-   cluster                     1 calls     5,071 in     284 out
-   selection:atlanta           1 calls     5,173 in     641 out
-   selection:global            1 calls     8,333 in     581 out
-   selection:opinion           1 calls     5,959 in     573 out
-   selection:turkey            1 calls     9,180 in     564 out
-   selection:us-politics       1 calls     7,616 in     681 out
+USAGE: 6 calls, 41,394 tokens in, 3,320 out, cost $0.0055
+   cluster                     1 calls     4,853 in     288 out
+   selection:atlanta           1 calls     5,196 in     631 out
+   selection:global            1 calls     8,032 in     653 out
+   selection:opinion           1 calls     5,550 in     551 out
+   selection:turkey            1 calls     9,322 in     546 out
+   selection:us-politics       1 calls     8,441 in     651 out
 RETRIES: http=0 connection=0 unparseable_reply=0
 
 SECTIONS (events = distinct events among this section's picks after clustering)
   section       cand picks events  pub/quota  stopped
-  us-politics     94    15      5        5/6  ran out of events
-  global          95    15      7        6/6  quota reached (1 events already taken by an earlier section)
-  turkey         100    14     14        4/4  quota reached (1 events already taken by an earlier section)
-  atlanta         74    15     14        4/4  quota reached
-  opinion         81    14     10        5/5  quota reached
+  us-politics    105    15     13        6/6  quota reached
+  global          93    15      8        6/6  quota reached
+  turkey         103    14     11        2/4  ran out of events
+  atlanta         75    15     11        4/4  quota reached
+  opinion         82    15     15        5/5  quota reached
 
 PICK POSITION (share of picks from each fifth of the list sent, front -> back)
-  us-politics   47%   7%  13%  20%  13%
-  global        60%   0%  13%  13%  13%   <- front-loaded: possible position bias
-  turkey        57%  43%   0%   0%   0%   <- front-loaded: possible position bias
-  atlanta       27%  33%  13%  27%   0%   <- front-loaded: possible position bias
-  opinion       64%   7%   0%  14%  14%   <- front-loaded: possible position bias
+  us-politics   53%   0%   0%   7%  40%
+  global        27%  27%  27%  13%   7%
+  turkey        86%  14%   0%   0%   0%   <- front-loaded: possible position bias
+  atlanta       27%  13%  13%  20%  27%
+  opinion       73%   7%   7%   0%  13%   <- front-loaded: possible position bias
 
 SOURCE YIELD (sent -> picked -> published)
-  atlanta      AJC             25 ->   9 ->   2
-  atlanta      GPB             25 ->   3 ->   1
-  atlanta      WSB-TV          25 ->   3 ->   1
+  atlanta      AJC             25 ->   5 ->   1
+  atlanta      GPB             25 ->   5 ->   1
+  atlanta      WSB-TV          25 ->   5 ->   2
   global       AP              25 ->   1 ->   0
-  global       BBC             20 ->   2 ->   0
-  global       GPB              0 ->   0 ->   1
-  global       Guardian        20 ->   2 ->   0
-  global       NYT             15 ->   7 ->   5
-  global       Reuters         25 ->   3 ->   0
+  global       BBC             20 ->   6 ->   2
+  global       Guardian        20 ->   2 ->   1
+  global       HDN              0 ->   0 ->   1
+  global       NYT             15 ->   4 ->   2
+  global       Reuters         25 ->   2 ->   0
   opinion      AJC             25 ->   0 ->   0   <- zero picks
-  opinion      BBC             25 ->   0 ->   0   <- zero picks
-  opinion      NPR             11 ->   1 ->   0
-  opinion      NYT             20 ->   9 ->   3
+  opinion      BBC             25 ->   1 ->   1
+  opinion      NPR             21 ->   1 ->   1
+  opinion      NYT             20 ->  11 ->   2
   opinion      Sözcü            3 ->   0 ->   0
-  opinion      T24             23 ->   4 ->   2
-  turkey       BBC Türkçe      12 ->   5 ->   2
+  opinion      T24             13 ->   2 ->   1
+  turkey       BBC Türkçe      12 ->   1 ->   1
   turkey       Cumhuriyet      12 ->   1 ->   1
-  turkey       HDN             20 ->   8 ->   1
+  turkey       HDN             20 ->  12 ->   0
   turkey       Now TV          25 ->   0 ->   0   <- zero picks
   turkey       Sözcü           12 ->   0 ->   0   <- zero picks
   turkey       T24             25 ->   0 ->   0   <- zero picks
-  us-politics  AP              25 ->   1 ->   0
-  us-politics  BBC             16 ->   2 ->   0
-  us-politics  NPR             10 ->   2 ->   0
-  us-politics  NYT             25 ->   7 ->   5
-  us-politics  PBS NewsHour    20 ->   3 ->   0
-  us-politics  ProPublica       4 ->   0 ->   0
+  us-politics  AP              25 ->   0 ->   0   <- zero picks
+  us-politics  BBC             22 ->   0 ->   0   <- zero picks
+  us-politics  NPR             10 ->   3 ->   2
+  us-politics  NYT             25 ->   8 ->   2
+  us-politics  PBS NewsHour    20 ->   1 ->   0
+  us-politics  ProPublica       7 ->   3 ->   2
 
 ZERO-PICK SOURCES (first titles, to judge: junk feed or ignored?)
-  us-politics | ProPublica
-      At a Doomed U.N. Conference, Saudi Arabia and Other Oil States Pushed Hard for an Unproven
-      Delayed Cancer Treatment. Missed Medication. How a Popular Insurance Plan’s Use of Prior A
-      Spotted on the D.C. Metro: Trump Staffer Accidentally Reveals Plan for Smithsonian Overhau
+  us-politics | AP
+      2 baby meerkats make their debut at a Peruvian zoo, spotlighting conservation
+      Heavy rain, wind and flooding plague much of US on Thanksgiving holiday
+      Schizophrenic man found guilty of attempted murders of 14 people, including 10 on London-b
+  us-politics | BBC
+      Fireball steals the show during Thanksgiving drone display in Indiana
+      Pregnant US inmate escapes in prison vehicle after medical appointment
+      US Army says controlled blast of explosives in Iowa was 'huge success'
   turkey | Sözcü
-      Ünlülere yeni uyuşturucu operasyonu! Özcan Deniz ve Deniz Çakır hakkında gözaltı kararı
-      İki bölgenin çiftçileri bir meyve yüzünden karşı karşıya geldi: Kimse geri adım atmıyor
-      ABD istihbaratına siber saldırı
+      Güneş nereye giderse o yöne dönecek ev inşa edecekler
+      Denizli’de feci kaza: Devrilen TIR’ın 29 yaşındaki sürücüsü kurtarılamadı
+      Nehirleri istila eden bitkiyi iş makineleriyle bile temizleyemiyorlar
   turkey | T24
-      Galatasaray'a Aston Villa maçında üç şok birden: Deniz Gül'ün burnunda kırık iddiası!
-      Beyoğlu Kaymakamlığı, 25 Kasım’da ilçedeki tüm eylem ve yürüyüşleri yasakladı: Taksim, İst
-      CANLI | Galatasaray 0-0 Aston Villa
+      #taksim yeşilyurt
+      CANLI | Anayasa Mahkemesi, Ekrem İmamoğlu’nun tutukluluğuna yaptığı itirazı reddetti!
+      Ayrılık sonrası yükselen trend: Boşanma yüzüğü nedir?
   turkey | Now TV
-      Anne Yarısı Dizisi Ali ve Zeynep'i şoke eden haber!
-      Yeraltı Dizisi 23 Bölüm
-      Dizi, Film, Haber, TV
-  opinion | BBC
-      China | Latest News & Updates
-      Artificial intelligence
-      Man Utd news: How can a decision be both right and wrong?
+      Yeraltı Dizisi 24 Bölüm
+      Anne Yarısı Dizisi 9 Bölüm
+      Ömür Usta Dizisi 9 Bölüm
   opinion | AJC
-      As sun sets on SEC football title game, volleyball rises in its place
-      Georgia school bus driver forced to resign over Charlie Kirk posts, lawsuit says
+      AJC goes behind the scenes of Hulu’s ‘The Circle’ in Midtown Atlanta
+      How to watch Georgia vs. Georgia Tech football, TV channel, streaming info
   opinion | Sözcü
+      Çalışma hayatında devrim niteliğinde dönüşüm: Diploma dönemi bitiyor
       Arkadaşlıkları bitiren 6 masum söz
-      Gülten Dayıoğlu'ndan duygulandıran vasiyet: Görüntüleri oğluna emanet etti
-      O aslan bir oligarkın olabilir mi? - İpek Özbey
 
 CLUSTERING
-  AI clustering: ok   73 candidates -> 48 groups   sizes {1: 43, 2: 2, 3: 1, 4: 1, 19: 1}
-  response repairs: {'mixed_news_opinion': 1}
+  AI clustering: ok   74 candidates -> 58 groups   sizes {1: 47, 2: 6, 3: 5}
+  response repairs: none
   auto-merged by similarity: 0
-  WEAK LINKS (2): cluster members barely similar to the rest; review for false merges
-      0.07 cluster-63 (size 4) NYT: Trump Seems Untouchable. But That’s Changing.
-      0.07 cluster-63 (size 4) NYT: Why the U.S. Can’t Afford to Let Nvidia Fail
-  CROSS-SECTION clusters (2): one event seen in several sections; one copy is kept
-      cluster-3 ['global', 'us-politics']
-      cluster-27 ['global', 'turkey']
+  WEAK LINKS (0): cluster members barely similar to the rest; review for false merges
+  CROSS-SECTION clusters (0): one event seen in several sections; one copy is kept
   MULTI-MEMBER clusters:
-      cluster-0 (3)
-          NYT: Broderick Wins Tennessee House Race, Giving Democrats Largest Majority in 30 Years
-          AP: Democrats clinch a historic House majority of at least 259 seats, the largest since 1990
-          NPR: Democrats win House by largest margin in 50 years. And, COP31 ends with no deal
-      cluster-3 (19)
-          PBS NewsHour: Huang's reinstatement at Nvidia sparks fury in Congress as lawmakers move forward with hearings
-          NYT: Trump Is Said to Have Pushed to Reinstate Nvidia CEO Jensen Huang
-          BBC: Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang
-          NPR: Trump takes credit for Jensen Huang returns to Nvidia, says its good for the economy
-          NYT: Trump’s Extraordinary Nvidia Intervention Sidelines National Security Concerns
-          PBS NewsHour: Why Trump believed he needed to get Jensen Huang back on top at Nvidia
-          PBS NewsHour: Why Trump pushed for Jensen Huang's return to Nvidia
-          NYT: Trump Administration Imposes Sanctions on Megaspeed, Singaporean Firm at Center of Nvidia Scandal
-          BBC: US to blacklist Asian AI firm Megaspeed after Nvidia scandal
-          Guardian: Schumer accuses Huang of violating US export control laws amid shipments of chips to China
-          NYT: Trump’s Nvidia Push Shows Companies’ Importance in Global Economic War
-          NYT: National Security vs. the Stock Market
-          Guardian: Nvidia CEO Jensen Huang apologizes to staff: ‘I made some terrible mistakes’
-          AP: Nvidia CEO Jensen Huang pulls off an unlikely comeback in just 11 days
-          Reuters: Nvidia board's Huang reversal raises doubts about independence, critics say
-          Reuters: Nvidia slips as investors assess risks surrounding Huang's return as CEO
-          Reuters: Nvidia's Huang returns to cheers in China, but political hurdles mount
-          BBC: US attorney general dodges questions about Nvidia investigation
-          BBC: What Jensen Huang's return teaches China's Xi about Trump
-      cluster-27 (2)
-          NYT: Iraq’s Prime Minister Aims to Wrest More Power from Kurdistan Region
-          HDN: Iraq PM orders federal control of Kurdish border crossings, oil fields
-      cluster-59 (2)
-          NYT: The ‘Everywhere, All at Once’ Cybersecurity Crisis
-          NYT: ‘The Digital Deficit Has Come Due’
-      cluster-63 (4)
-          NYT: Trump Seems Untouchable. But That’s Changing.
-          NYT: When You’re a Star They Let You Compromise National Security
-          NYT: Why the U.S. Can’t Afford to Let Nvidia Fail
-          NPR: Rep. Raja Krishnamoorthi, D-Ill., on Trump's involvement in the stock market
-  LEXICAL AUDIT (similar but not merged): 2 shown
-      0.21  AJC: Guest Column - In America First era, Persian Gulf states beef up security  |  AJC: Guest Column - Robert F. Kennedy Jr. is presiding over a public health disaster
-      0.21  AJC: Guest Column - Robert F. Kennedy Jr. is presiding over a public health disaster  |  AJC: Guest Column: Hiring managers must avoid correlating visible with valuable
+      cluster-8 (3)
+          NPR: Sen. Tim Kaine, D-Va., shares why he opposes Trump's proposed tariffs
+          NPR: Trump administration proposes new tariffs on goods from major U.S. trading partners
+          PBS NewsHour: Trump administration to raise tariffs on China, EU, Brazil and others
+      cluster-15 (3)
+          NYT: Two Italians Killed in Iranian Drone Attack on Kuwait, Officials Say
+          Reuters: Two Italians killed in attack on Kuwait site, Iran denies involvement
+          BBC: Two Italians killed in strike in Kuwait, as Iran denies responsibility
+      cluster-18 (2)
+          NYT: 13 Dead and 13 Thought Trapped in Indonesian Mine After Heavy Rain
+          BBC: Thirteen dead as mine disaster highlights illegal hunt for gold
+      cluster-19 (2)
+          NYT: Brazilian Duped Into Fighting for Russia: ‘War Is Hell’
+          NYT: Lured by High Salaries, Some Brazilians Were Duped Into Fighting for Russia
+      cluster-20 (3)
+          BBC: Deadly fire erupts near Cairo killing dozens of people
+          BBC: Egyptian authorities arrest motorist over tanker crash that killed 31
+          AP: Fuel tanker crash ignites a massive fire on a highway surrounding Cairo, killing at least 31 people
+      cluster-27 (3)
+          BBC: Hamas political official and wife among eight Palestinians killed in Israeli strikes on Gaza
+          Reuters: Hamas weighs response after Israel kills 10 people in Gaza
+          Guardian: Israeli strikes kill 16 schoolchildren so far this month, Gaza ministry says
+      cluster-31 (2)
+          BBC Türkçe: Anayasa Mahkemesi'nden İmamoğlu'nun tutukluluk itirazına ret
+          HDN: Turkish top court rejects İmamoğlu’s appeal against arrest
+      cluster-34 (2)
+          HDN: $330 million plant to cut Türkiye’s chemical imports
+          Cumhuriyet: Rusya’dan Türkiye’ye 330 milyon dolarlık petrokimya yatırımı: Başbakan Yardımcısı, tesisin açılışına
+      cluster-44 (2)
+          WSB-TV: Fulton County wins emergency stay in fight over unredacted 2020 election records
+          GPB: Judge halts order for Georgia's Fulton County to give 2020 election records to State Election Board
+      cluster-50 (3)
+          WSB-TV: Georgia governor-elect Keisha Lance Bottoms announces inauguration plans
+          AJC: How Brian Kemp and Keisha Lance Bottoms can unite behind Georgia veterans
+          GPB: Inauguration ceremony for Gov.-elect Bottoms set for Jan. 12 in Atlanta's State Farm Arena
+      cluster-57 (2)
+          GPB: Storms disrupt Thanksgiving travel. And, FCC violated ABC's free speech, judge says
+          GPB: U.S. Judge rules FCC violated ABC's free speech rights to please Trump
+  LEXICAL AUDIT (similar but not merged): 0 shown
 
 SCORES (min / median / max)
-  us-politics   picks 7 / 8 / 9        published 7 / 7 / 9
-  global        picks 7 / 8 / 9        published 5 / 7.0 / 7
-  turkey        picks 6 / 7 / 8        published 6 / 7.0 / 8
-  atlanta       picks 5 / 6 / 8        published 7 / 7.5 / 8
-  opinion       picks 7 / 7 / 9        published 7 / 8 / 9
+  us-politics   picks 6 / 7 / 8        published 7 / 7.0 / 8
+  global        picks 7 / 8 / 9        published 5 / 8.0 / 9
+  turkey        picks 5 / 7.0 / 8      published 7 / 7.5 / 8
+  atlanta       picks 5 / 6 / 8        published 6 / 7.0 / 8
+  opinion       picks 5 / 7 / 8        published 6 / 6 / 8
 
-PUBLISHED (24) section | score | age | source | title
- * us-politics    9    1.4h  NYT: Broderick Wins Tennessee House Race, Giving Democrats Largest Majority in 30 Years
-   us-politics    8   21.2h  NYT: Trump Is Said to Have Pushed to Reinstate Nvidia CEO Jensen Huang
-   us-politics    7    4.9h  NYT: No. 2 Official at F.B.I. Is Said to Be Retiring Before End of Year
-   us-politics    7    2.4h  NYT: Trump Ballroom and Other Projects Got $300 Million Donation Boost
-   us-politics    7    0.1h  NYT: U.S. Spy Agencies Suffer Breach of Some Unclassified Information
- * global         7    6.1h  NYT: China Investigates Chen Jining, Shanghai’s Party Leader, as Xi’s Purges Expand
-   global         5    3.7h  GPB: The human cost of the electric vehicle boom is at the center of a lawsuit in Congo
-   global         7    1.5h  NYT: Houthi Attack on Skyscraper in Saudi Capital Wounds 11, Officials Say
-   global         7    0.6h  NYT: Iraq’s Prime Minister Aims to Wrest More Power from Kurdistan Region
-   global         7    6.6h  NYT: Murder Charge Reinstated for French Police Officer in Teen’s Shooting
-   global         7    6.9h  NYT: Norway Has Closed Its Last Coal Mine, Ending a Way of Life in the Arctic
- * turkey         8    9.9h  HDN: Development Road Project to bring $61.5 bln to Turkish economy over 10 years
-   turkey         7    2.7h  BBC Türkçe: AKP Genel Başkan Yardımcısı Hayati Yazıcı görevlerinden istifa etti
-   turkey         6    0.1h  Cumhuriyet: Galatasaray'dan Şampiyonlar Ligi'nde 25 yıl sonra bir ilk
-   turkey         7   10.8h  BBC Türkçe: Bahçeli: 'Yolsuzluğa hiçbir şekilde müsamaha gösterme niyetinde değiliz'
- * atlanta        8    3.0h  AJC: Georgia Gwinnett College Republicans host white separatist, sparking protest
-   atlanta        7    1.5h  GPB: Data centers flood Black communities without residents having a say
-   atlanta        7    4.0h  WSB-TV: More than 40% of Georgians struggled to afford food in 2026, study says
-   atlanta        8   10.9h  AJC: This Georgia House runoff could widen Democrats’ new majority or boost GOP
- * opinion        9   10.8h  NYT: The ‘Everywhere, All at Once’ Cybersecurity Crisis
-   opinion        8   57.5h  T24: Aralarında Nobel ödüllü ekonomist Daron Acemoğlu da var; akademisyenler, 'Uluslararası Oligarşiye Karşı Paris Manifestosu'nu imzaladı: Milyarderler demokrasiler için tehdit!
-   opinion        8    1.7h  NYT: The National Popular Vote and the End of the Electoral College as We Know It
-   opinion        7   36.1h  T24: Anayasa Mahkemesi, T24'ün erişim engelinin durdurulmasına yönelik 'tedbir' talebini reddetti; dosya esastan görüşülecek!
-   opinion        8    6.9h  NYT: Trump Seems Untouchable. But That’s Changing.
+PUBLISHED (23) section | score | age | source | title
+ * us-politics    8    9.7h  NYT: Bipartisan Desire to Regulate A.I. Faces Obstacles in Congress
+   us-politics    7   33.8h  ProPublica: An Alarming Spike in Ectopic Pregnancy Deaths Was Hiding in Plain Sight in a Federal Dataset
+   us-politics    7    8.1h  NPR: Sen. Tim Kaine, D-Va., shares why he opposes Trump's proposed tariffs
+   us-politics    8   25.8h  NYT: C.I.A. Waterboarded More Detainees Than It Admitted, F.B.I. Interview Suggests
+   us-politics    7   57.8h  ProPublica: Delayed Cancer Treatment. Missed Medication. How a Popular Insurance Plan’s Use of Prior Authorization Hurt Patients.
+   us-politics    7   46.7h  NPR: The U.S. government is investigating Iranian ties to as many as 50 hacked commercial vessels
+ * global         9    0.2h  NYT: Two Italians Killed in Iranian Drone Attack on Kuwait, Officials Say
+   global         8   10.6h  BBC: Deadly fire erupts near Cairo killing dozens of people
+   global         8    1.6h  Guardian: What would happen if Russia detonated a nuclear weapon in space?
+   global         5    7.5h  HDN: Netanyahu’s grip on Israeli parliament weakens
+   global         8    4.9h  NYT: 13 Dead and 13 Thought Trapped in Indonesian Mine After Heavy Rain
+   global         8    3.4h  BBC: Nine injured, three critically, after Bangkok oil refinery explosion
+ * turkey         8    7.5h  BBC Türkçe: Anayasa Mahkemesi'nden İmamoğlu'nun tutukluluk itirazına ret
+   turkey         7    0.7h  Cumhuriyet: Rusya’dan Türkiye’ye 330 milyon dolarlık petrokimya yatırımı: Başbakan Yardımcısı, tesisin açılışına katıldı
+ * atlanta        8   24.0h  WSB-TV: Fulton County wins emergency stay in fight over unredacted 2020 election records
+   atlanta        7    6.6h  GPB: Georgia leads nation in permanent loss of forest land
+   atlanta        6    1.3h  AJC: Atlanta adds 20,500 jobs, but unemployment edges higher
+   atlanta        7    2.0h  WSB-TV: Georgia city targeted in cyberattack day before Thanksgiving
+ * opinion        8    7.6h  NYT: Don’t Sign Up for Debt This Black Friday
+   opinion        6   70.8h  T24: Hakan Okçal | COP31 Antalya İklim Zirvesi anlaşma sağlanamadan kapandı: Suçlu fosil yakıt lobisi
+   opinion        6   34.1h  NPR: Iowans are worried about toxic fallout from a planned detonation. A look at the risks
+   opinion        6    1.4h  BBC: Second court defeat for Trump's deep-sea mining ambitions
+   opinion        8    2.4h  NYT: These Batteries Are Big. And They’re Revolutionizing America’s Power Supply.
 
 POSSIBLE REPEATS OF THE LAST 3 DAYS (similarity >= 0.3; may be updates, not repeats)
   (none found, or no earlier runs on file)
